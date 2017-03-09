@@ -20,10 +20,6 @@ public class HumanTests {
 		assertEquals("Bloggs", testDummy.getLName());
 	}
 	
-	@Test
-	public void testGetSecondName4(){
-		assertEquals("Bloogs", testDummy.getLName());
-	}
 	
 
 }
