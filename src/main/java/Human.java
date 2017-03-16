@@ -49,12 +49,16 @@ public final class Human {
 		this.address = address;
 	}
 
-	public int getWeight() {
+	public int getWeightInPounds() {
 		return weight;
 	}
 
-	public void setWeight(int weight) {
-		this.weight = weight;
+	public void setWeightInPounds(int weight) {
+		if (weight > 350 || weight < 0) {
+			throw new IllegalArgumentException("Weight must be within the range 0-350lbs");
+		} else {
+			this.weight = weight;
+		}
 	}
 
 	public int getHeight() {
@@ -70,7 +74,7 @@ public final class Human {
 	}
 
 	public void setAge(int age) {
-		if(age<0)
+		if (age < 0)
 			throw new IllegalArgumentException("Age cannot be negative");
 		this.age = age;
 
