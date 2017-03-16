@@ -21,6 +21,12 @@ public class HumanTests {
 		assertEquals(23, testDummy.getAge());
 	}
 	
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetAgeNegativeThrowException(){
+		testDummy.setAge(-1);
+		assertEquals(-1, testDummy.getAge());
+	}
+		
 	
 	@Test
 	public void testGetWeight() {
