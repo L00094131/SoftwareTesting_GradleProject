@@ -17,14 +17,19 @@ public class HumanTests {
 	
 	
 	@Test
-	public void testGetSecondName4() {
-		assertEquals("Bloggs", testDummy.getLName());
+	public void testGetAge() {
+		assertEquals(23, testDummy.getAge());
 	}
 	
 	
 	@Test
-	public void testGetSecondName5() {
-		assertEquals("Bloggs", testDummy.getLName());
+	public void testGetWeight() {
+		assertEquals(140, testDummy.getWeight());
+	}
+	
+	@Test
+	public void testGetHeight() {
+		assertEquals(160, testDummy.getHeight());
 	}
 	
 
