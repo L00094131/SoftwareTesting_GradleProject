@@ -22,6 +22,12 @@ public class HumanTests {
 		assertEquals("Bloggs", myHuman.getLName());
 	}
 	
+	@Test
+	public void testSetLastName() {
+		myHuman.setLName("Robb");
+		assertEquals("Robb", myHuman.getLName());
+	}
+	
 	
 	@Test
 	public void testGetAge() {
