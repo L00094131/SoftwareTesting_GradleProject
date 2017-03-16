@@ -3,7 +3,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class HumanTests {
-	private Human myHuman = new Human("Joe", "Bloggs", "Deerpark", 140, 160, 23);
+	private Human myHuman = new Human("Joe", "Bloggs", "Deerpark", 140, 185, 23);
 
 	@Test
 	public void testGetFirstName() {
@@ -45,10 +45,21 @@ public class HumanTests {
 		assertEquals(-1, myHuman.getWeightInPounds());
 	}
 	
-	
 	@Test
-	public void testGetHeight() {
-		assertEquals(160, myHuman.getHeight());
+	public void testGetHeightInCentimeters(){
+		assertEquals(185, myHuman.getHeightInCentimeters());
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetHeightInCentimetersNegativeHeightException() {
+		myHuman.setHeightInCentimeters(-1);
+		assertEquals(-1, myHuman.getHeightInCentimeters());
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetHeightInCentimetersTooTallException() {
+		myHuman.setHeightInCentimeters(276);
+		assertEquals(276, myHuman.getHeightInCentimeters());
 	}
 	
 
