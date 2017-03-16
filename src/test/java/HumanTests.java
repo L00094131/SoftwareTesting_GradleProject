@@ -10,6 +10,12 @@ public class HumanTests {
 		assertEquals("Joe", myHuman.getFName());
 	}
 	
+	@Test
+	public void testSetFirstName() {
+		myHuman.setFName("Eugene");
+		assertEquals("Eugene", myHuman.getFName());
+	}
+	
 
 	@Test
 	public void testGetSecondName() {
