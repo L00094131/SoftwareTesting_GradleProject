@@ -10,10 +10,6 @@ public class HumanTests {
 		assertEquals("Joe", myHuman.getFName());
 	}
 	
-	@Test
-	public void testGetFirstName2() {
-		assertEquals("Joe", myHuman.getFName());
-	}
 
 	@Test
 	public void testGetSecondName() {
