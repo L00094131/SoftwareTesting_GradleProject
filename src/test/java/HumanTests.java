@@ -58,8 +58,8 @@ public class HumanTests {
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetHeightInCentimetersTooTallException() {
-		myHuman.setHeightInCentimeters(276);
-		assertEquals(276, myHuman.getHeightInCentimeters());
+		myHuman.setHeightInCentimeters(277);
+		assertEquals(277, myHuman.getHeightInCentimeters());
 	}
 	
 
