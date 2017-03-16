@@ -61,12 +61,16 @@ public final class Human {
 		}
 	}
 
-	public int getHeight() {
+	public int getHeightInCentimeters() {
 		return height;
 	}
 
-	public void setHeight(int height) {
-		this.height = height;
+	public void setHeightInCentimeters(int height) {
+		if (height > 275 || height < 0) {
+			throw new IllegalArgumentException("Height must be within the range 0-275cm");
+		}else{
+			this.height = height;
+		}
 	}
 
 	public int getAge() {
@@ -74,10 +78,11 @@ public final class Human {
 	}
 
 	public void setAge(int age) {
-		if (age < 0)
+		if (age < 0){
 			throw new IllegalArgumentException("Age cannot be negative");
-		this.age = age;
-
+		}else{
+			this.age = age;
+		}
 	}
 
 }
