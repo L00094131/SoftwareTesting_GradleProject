@@ -33,7 +33,7 @@ public class HumanTests {
 		myHuman.setFName("John--Joe");
 		assertEquals("John--Joe", myHuman.getFName());
 	}
-	/*
+	
 	@Test
 	public void testApostrophesFName() {
 		myHuman.setFName("D'Angelo");
@@ -63,7 +63,7 @@ public class HumanTests {
 		myHuman.setFName("Séan'Og");
 		assertEquals("Séan'Og", myHuman.getFName());
 	}
-	*/
+	
 	
 	@Test (expected = IllegalArgumentException.class)
 	public void testSetFNameWithNumber() {
