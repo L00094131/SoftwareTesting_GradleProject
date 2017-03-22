@@ -33,7 +33,7 @@ public class HumanTests {
 		myHuman.setFName("John--Joe");
 		assertEquals("John--Joe", myHuman.getFName());
 	}
-	
+	/*
 	@Test
 	public void testApostrophesFName() {
 		myHuman.setFName("D'Angelo");
@@ -44,6 +44,12 @@ public class HumanTests {
 	public void testSingleFadaIrishFName() {
 		myHuman.setFName("Bláthnaid");
 		assertEquals("Bláthnaid", myHuman.getFName());
+	}
+
+	@Test (expected = IllegalArgumentException.class)
+	public void testSetFNameWithSymbol() {
+		myHuman.setFName("€ugene");
+		assertEquals("€ugene", myHuman.getFName());
 	}
 	
 	@Test
@@ -57,6 +63,7 @@ public class HumanTests {
 		myHuman.setFName("Séan'Og");
 		assertEquals("Séan'Og", myHuman.getFName());
 	}
+	*/
 	
 	@Test (expected = IllegalArgumentException.class)
 	public void testSetFNameWithNumber() {
@@ -64,11 +71,7 @@ public class HumanTests {
 		assertEquals("J0hn", myHuman.getFName());
 	}
 	
-	@Test (expected = IllegalArgumentException.class)
-	public void testSetFNameWithSymbol() {
-		myHuman.setFName("€ugene");
-		assertEquals("€ugene", myHuman.getFName());
-	}
+
 	
 	@Test
 	public void testSetFirstName() {
