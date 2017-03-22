@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HumanTests" tests="10" skipped="0" failures="0" errors="0" timestamp="2017-03-16T20:01:12" hostname="Eugene" time="0.01">
+<testsuite name="HumanTests" tests="19" skipped="0" failures="0" errors="0" timestamp="2017-03-22T14:32:22" hostname="Eugene" time="0.184">
   <properties/>
   <testcase name="testSetHeightInCentimetersTooTallException" classname="HumanTests" time="0.003"/>
-  <testcase name="testGetWeightInPounds" classname="HumanTests" time="0.001"/>
-  <testcase name="testGetHeightInCentimeters" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetWeightInPoundsNegativeWeightException" classname="HumanTests" time="0.0"/>
-  <testcase name="testGetFirstName" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetWeightInPoundsTooHeavyException" classname="HumanTests" time="0.0"/>
-  <testcase name="testGetAge" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetAgeNegativeAgeException" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetHeightInCentimetersNegativeHeightException" classname="HumanTests" time="0.0"/>
-  <testcase name="testGetSecondName" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetFirstName" classname="HumanTests" time="0.003"/>
+  <testcase name="testSetFNameWithNumber" classname="HumanTests" time="0.001"/>
+  <testcase name="testDoubleHypenatedFName" classname="HumanTests" time="0.023"/>
+  <testcase name="testGetWeightInPounds" classname="HumanTests" time="0.008"/>
+  <testcase name="testSingleFadaIrishFName" classname="HumanTests" time="0.005"/>
+  <testcase name="testDoubleFadaIrishFName" classname="HumanTests" time="0.005"/>
+  <testcase name="testSetLastName" classname="HumanTests" time="0.005"/>
+  <testcase name="testGetHeightInCentimeters" classname="HumanTests" time="0.005"/>
+  <testcase name="testApostrophesFName" classname="HumanTests" time="0.001"/>
+  <testcase name="testHypenatedFName" classname="HumanTests" time="0.003"/>
+  <testcase name="testSetWeightInPoundsNegativeWeightException" classname="HumanTests" time="0.001"/>
+  <testcase name="testFailedDoubleHypenatedFName" classname="HumanTests" time="0.003"/>
+  <testcase name="testGetFirstName" classname="HumanTests" time="0.002"/>
+  <testcase name="testSetWeightInPoundsTooHeavyException" classname="HumanTests" time="0.002"/>
+  <testcase name="testGetAge" classname="HumanTests" time="0.002"/>
+  <testcase name="testSetAgeNegativeAgeException" classname="HumanTests" time="0.007"/>
+  <testcase name="testSetHeightInCentimetersNegativeHeightException" classname="HumanTests" time="0.006"/>
+  <testcase name="testGetSecondName" classname="HumanTests" time="0.005"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

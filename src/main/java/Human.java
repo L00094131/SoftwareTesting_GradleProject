@@ -28,9 +28,26 @@ public final class Human {
 	public String getFName() {
 		return fname;
 	}
+	
+	/*
+	 * regex for first name allows for
+	 * hyphenated names
+	 * names with apostrophes 
+	 * names with spaces
+	 * Irish names with fadas
+	 *  
+	*/
+	public static boolean validateFName(String fname){
+		return fname.matches("[a-zA-záéóíú]+([ '-][a-zA-Z]+)*");
+	}
 
 	public void setFName(String fname) {
-		this.fname = fname;
+		if(validateFName(fname) == true){
+			this.fname = fname;
+		}else{
+			throw new IllegalArgumentException("First name can only be alphabetic with apostrophe or hyphenated.", null);
+		}
+		
 	}
 
 	public String getLName() {

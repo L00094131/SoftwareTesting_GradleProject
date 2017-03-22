@@ -11,6 +11,60 @@ public class HumanTests {
 	}
 	
 	@Test
+	public void testHypenatedFName() {
+		myHuman.setFName("John-Joe");
+		assertEquals("John-Joe", myHuman.getFName());
+	}
+	
+	@Test
+	public void testFNameWithSpace() {
+		myHuman.setFName("John Paul");
+		assertEquals("John Paul", myHuman.getFName());
+	}
+	
+	@Test
+	public void testDoubleHypenatedFName() {
+		myHuman.setFName("John-Joe");
+		assertEquals("John-Joe", myHuman.getFName());
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testFailedDoubleHypenatedFName() {
+		myHuman.setFName("John--Joe");
+		assertEquals("John--Joe", myHuman.getFName());
+	}
+	
+	@Test
+	public void testApostrophesFName() {
+		myHuman.setFName("D'Angelo");
+		assertEquals("D'Angelo", myHuman.getFName());
+	}
+	
+	@Test
+	public void testSingleFadaIrishFName() {
+		myHuman.setFName("Bláthnaid");
+		assertEquals("Bláthnaid", myHuman.getFName());
+	}
+	
+	@Test
+	public void testDoubleFadaIrishFName() {
+		myHuman.setFName("Bláthnaíd");
+		assertEquals("Bláthnaíd", myHuman.getFName());
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testSetFNameWithNumber() {
+		myHuman.setFName("J0hn");
+		assertEquals("J0hn", myHuman.getFName());
+	}
+	
+	@Test (expected = IllegalArgumentException.class)
+	public void testSetFNameWithSymbol() {
+		myHuman.setFName("€ugene");
+		assertEquals("€ugene", myHuman.getFName());
+	}
+	
+	@Test
 	public void testSetFirstName() {
 		myHuman.setFName("Eugene");
 		assertEquals("Eugene", myHuman.getFName());
