@@ -52,6 +52,12 @@ public class HumanTests {
 		assertEquals("Bláthnaíd", myHuman.getFName());
 	}
 	
+	@Test
+	public void testFadaWithApostropheIrishFName() {
+		myHuman.setFName("Séan'Og");
+		assertEquals("Séan'Og", myHuman.getFName());
+	}
+	
 	@Test (expected = IllegalArgumentException.class)
 	public void testSetFNameWithNumber() {
 		myHuman.setFName("J0hn");
