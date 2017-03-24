@@ -97,6 +97,12 @@ public class HumanTests {
 		assertEquals(23, myHuman.getAge());
 	}
 	
+	@Test
+	public void testSetAge(){
+		myHuman.setAge(23);
+		assertEquals(23, myHuman.getAge());
+	}
+	
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetAgeNegativeAgeException(){
 		myHuman.setAge(-1);
@@ -107,6 +113,12 @@ public class HumanTests {
 	@Test
 	public void testGetWeightInPounds() {
 		assertEquals(140, myHuman.getWeightInPounds());
+	}
+	
+	@Test
+	public void testSetWeightInPounds(){
+		myHuman.setWeightInPounds(160);
+		assertEquals(160, myHuman.getWeightInPounds());
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
@@ -123,6 +135,12 @@ public class HumanTests {
 	
 	@Test
 	public void testGetHeightInCentimeters(){
+		assertEquals(185, myHuman.getHeightInCentimeters());
+	}
+	
+	@Test
+	public void testSetHeightInCentimeters(){
+		myHuman.setHeightInCentimeters(185);
 		assertEquals(185, myHuman.getHeightInCentimeters());
 	}
 	
