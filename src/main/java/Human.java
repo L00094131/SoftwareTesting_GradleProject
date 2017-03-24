@@ -35,13 +35,11 @@ public final class Human {
 	 * names with apostrophes 
 	 * names with spaces
 	 * Irish names with fadas
-	 *  	public static boolean validateFName(String fname){
-		return fname.matches("[a-zA-záéóíú]+([ '-][a-zA-Z]+)*");
-	}
+	 *  
 	*/
 
 	public static boolean validateFName(String fname){
-		return fname.matches("[a-zA-záéóíú]+([ '-][a-zA-Z]+)*");
+		return fname.matches("[a-zA-zÃ¡Ã©Ã­Ã³Ãº]+([ '-][a-zA-Z]+)*");
 	}
 
 

@@ -42,26 +42,26 @@ public class HumanTests {
 	
 	@Test
 	public void testSingleFadaIrishFName() {
-		myHuman.setFName("Bl·thnaid");
-		assertEquals("Bl·thnaid", myHuman.getFName());
+		myHuman.setFName("Bl√°thnaid");
+		assertEquals("Bl√°thnaid", myHuman.getFName());
 	}
 
 	@Test (expected = IllegalArgumentException.class)
 	public void testSetFNameWithSymbol() {
-		myHuman.setFName("Äugene");
-		assertEquals("Äugene", myHuman.getFName());
+		myHuman.setFName("‚Ç¨ugene");
+		assertEquals("‚Ç¨ugene", myHuman.getFName());
 	}
 	
 	@Test
 	public void testDoubleFadaIrishFName() {
-		myHuman.setFName("Bl·thnaÌd");
-		assertEquals("Bl·thnaÌd", myHuman.getFName());
+		myHuman.setFName("Bl√°thna√≠d");
+		assertEquals("Bl√°thna√≠d", myHuman.getFName());
 	}
 	
 	@Test
 	public void testFadaWithApostropheIrishFName() {
-		myHuman.setFName("SÈan'Og");
-		assertEquals("SÈan'Og", myHuman.getFName());
+		myHuman.setFName("S√©an'Og");
+		assertEquals("S√©an'Og", myHuman.getFName());
 	}
 	
 	
