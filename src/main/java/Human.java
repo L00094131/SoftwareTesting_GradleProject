@@ -114,8 +114,8 @@ public final class Human {
 	}
 
 	public void setAge(int age) {
-		if (age < 0) {
-			throw new IllegalArgumentException("Age cannot be negative");
+		if (age > 130 || age < 0) {
+			throw new IllegalArgumentException("Age must be within the range 0-130 years");
 		} else {
 			this.age = age;
 		}

@@ -197,11 +197,13 @@ public class HumanTests {
 		assertEquals(130, myHuman.getAge());
 	}
 
+	
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetAboveMaxAgeException() {
 		myHuman.setAge(131);
 		assertEquals(131, myHuman.getAge());
 	}
+
 
 	// Weight tests
 	@Test
