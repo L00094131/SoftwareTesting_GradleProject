@@ -1,3 +1,7 @@
+/**
+ * @author Eugene
+ *
+ */
 public final class Human {
 
 	private String fname;
@@ -29,35 +33,48 @@ public final class Human {
 		return fname;
 	}
 	
-	/*
-	 * regex for first name allows for
-	 * hyphenated names
-	 * names with apostrophes 
-	 * names with spaces
-	 * Irish names with fadas
-	 *  
-	*/
-
-	public static boolean validateFName(String fname){
-		return fname.matches("[a-zA-záéíóú]+([ '-][a-zA-Z]+)*");
-	}
-
-
-	public void setFName(String fname) {
-		if(validateFName(fname) == true){
-			this.fname = fname;
-		}else{
-			throw new IllegalArgumentException("First name can only be alphabetic with apostrophe or hyphenated.", null);
-		}
-		
-	}
-
 	public String getLName() {
 		return lname;
 	}
 
+	/*
+	 * regex for first name allows for hyphenated names names with apostrophes
+	 * names with spaces Irish names with fadas
+	 * 
+	 */
+
+	public static boolean validateFName(String fname) {
+		return fname.matches("[a-zA-záéíóú]+([ '-][a-zA-Z]+)*");
+	}
+	
+	/*
+	 * regex for last name allows for hyphenated names names with apostrophes
+	 * names with spaces Irish names with fadas, names with commas and full stops
+	 * 
+	 */
+	public static boolean validateLName(String lname) {
+		return lname.matches("^\\p{L}+[\\p{L}\\p{Z}\\p{P}]{0,}");
+	}
+	
+
+	public void setFName(String fname) {
+		if (validateFName(fname) == true) {
+			this.fname = fname;
+		} else {
+			throw new IllegalArgumentException("First name can only be alphabetic with apostrophe or hyphen.",
+					null);
+		}
+
+	}
+
+
 	public void setLName(String lname) {
-		this.lname = lname;
+		if (validateLName(lname) == true) {
+			this.lname = lname;
+		} else {
+			throw new IllegalArgumentException("Last name can only be alphabetic with apostrophe or hyphen.",
+					null);
+		}
 	}
 
 	public String getAddress() {
@@ -87,7 +104,7 @@ public final class Human {
 	public void setHeightInCentimeters(int height) {
 		if (height > 275 || height < 0) {
 			throw new IllegalArgumentException("Height must be within the range 0-275cm");
-		}else{
+		} else {
 			this.height = height;
 		}
 	}
@@ -97,9 +114,9 @@ public final class Human {
 	}
 
 	public void setAge(int age) {
-		if (age < 0){
+		if (age < 0) {
 			throw new IllegalArgumentException("Age cannot be negative");
-		}else{
+		} else {
 			this.age = age;
 		}
 	}
