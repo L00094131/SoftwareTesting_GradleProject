@@ -197,13 +197,11 @@ public class HumanTests {
 		assertEquals(130, myHuman.getAge());
 	}
 
-	
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetAboveMaxAgeException() {
 		myHuman.setAge(131);
 		assertEquals(131, myHuman.getAge());
 	}
-
 
 	// Weight tests
 	@Test
@@ -212,44 +210,93 @@ public class HumanTests {
 	}
 
 	@Test
-	public void testSetWeightInPounds() {
-		myHuman.setWeightInPounds(160);
-		assertEquals(160, myHuman.getWeightInPounds());
+	public void testSetMiddleWeightInPounds() {
+		myHuman.setWeightInPounds(175);
+		assertEquals(175, myHuman.getWeightInPounds());
+	}
+
+	@Test
+	public void testSetMaxWeightInPounds() {
+		myHuman.setWeightInPounds(350);
+		assertEquals(350, myHuman.getWeightInPounds());
+	}
+
+	@Test
+	public void testSetBelowMaxWeightInPounds() {
+		myHuman.setWeightInPounds(349);
+		assertEquals(349, myHuman.getWeightInPounds());
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void testSetWeightInPoundsTooHeavyException() {
+	public void testSetAboveMaxWeightInPoundsException() {
 		myHuman.setWeightInPounds(351);
 		assertEquals(351, myHuman.getWeightInPounds());
 	}
 
+	@Test
+	public void testSetMinWeightInPounds() {
+		myHuman.setWeightInPounds(1);
+		assertEquals(1, myHuman.getWeightInPounds());
+	}
+	
+	@Test
+	public void testSetAboveMinWeightInPounds() {
+		myHuman.setWeightInPounds(2);
+		assertEquals(2, myHuman.getWeightInPounds());
+	}
+	
 	@Test(expected = IllegalArgumentException.class)
-	public void testSetWeightInPoundsNegativeWeightException() {
-		myHuman.setWeightInPounds(-1);
-		assertEquals(-1, myHuman.getWeightInPounds());
+	public void testSetBelowMinWeightInPoundsException() {
+		myHuman.setWeightInPounds(0);
+		assertEquals(0, myHuman.getWeightInPounds());
 	}
 
+	// Height tests
 	@Test
 	public void testGetHeightInCentimeters() {
 		assertEquals(185, myHuman.getHeightInCentimeters());
 	}
 
 	@Test
-	public void testSetHeightInCentimeters() {
-		myHuman.setHeightInCentimeters(185);
-		assertEquals(185, myHuman.getHeightInCentimeters());
+	public void testSetMiddleHeightInCentimeters() {
+		myHuman.setHeightInCentimeters(137);
+		assertEquals(137, myHuman.getHeightInCentimeters());
+	}
+	
+	@Test
+	public void testSetMinHeightInCentimeters() {
+		myHuman.setHeightInCentimeters(20);
+		assertEquals(20, myHuman.getHeightInCentimeters());
+	}
+	
+	@Test
+	public void testSetAboveMinHeightInCentimeters() {
+		myHuman.setHeightInCentimeters(21);
+		assertEquals(21, myHuman.getHeightInCentimeters());
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void testSetHeightInCentimetersNegativeHeightException() {
-		myHuman.setHeightInCentimeters(-1);
-		assertEquals(-1, myHuman.getHeightInCentimeters());
+	public void testSetBelowMinHeightInCentimetersException() {
+		myHuman.setHeightInCentimeters(19);
+		assertEquals(19, myHuman.getHeightInCentimeters());
 	}
 
+	@Test
+	public void testSetMaxHeightInCentimeters() {
+		myHuman.setHeightInCentimeters(275);
+		assertEquals(275, myHuman.getHeightInCentimeters());
+	}
+	
+	@Test
+	public void testSetBelowMaxHeightInCentimeters() {
+		myHuman.setHeightInCentimeters(274);
+		assertEquals(274, myHuman.getHeightInCentimeters());
+	}
+	
 	@Test(expected = IllegalArgumentException.class)
-	public void testSetHeightInCentimetersTooTallException() {
-		myHuman.setHeightInCentimeters(277);
-		assertEquals(277, myHuman.getHeightInCentimeters());
+	public void testSetAboveMaxHeightInCentimetersException() {
+		myHuman.setHeightInCentimeters(276);
+		assertEquals(276, myHuman.getHeightInCentimeters());
 	}
 
 }

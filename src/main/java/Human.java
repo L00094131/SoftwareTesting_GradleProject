@@ -90,7 +90,7 @@ public final class Human {
 	}
 
 	public void setWeightInPounds(int weight) {
-		if (weight > 350 || weight < 0) {
+		if (weight > 350 || weight < 1) {
 			throw new IllegalArgumentException("Weight must be within the range 0-350lbs");
 		} else {
 			this.weight = weight;
@@ -102,7 +102,7 @@ public final class Human {
 	}
 
 	public void setHeightInCentimeters(int height) {
-		if (height > 275 || height < 0) {
+		if (height > 275 || height < 20) {
 			throw new IllegalArgumentException("Height must be within the range 0-275cm");
 		} else {
 			this.height = height;
