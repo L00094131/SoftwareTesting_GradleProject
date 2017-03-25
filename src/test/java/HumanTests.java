@@ -82,31 +82,31 @@ public class HumanTests {
 	public void testGetLastName() {
 		assertEquals("Bloggs", myHuman.getLName());
 	}
-	
+
 	@Test
 	public void testSetLastName() {
 		myHuman.setLName("Robb");
 		assertEquals("Robb", myHuman.getLName());
 	}
-	
+
 	@Test
 	public void testSpaceLastName() {
 		myHuman.setLName("Mc Grath");
 		assertEquals("Mc Grath", myHuman.getLName());
 	}
-	
+
 	@Test
 	public void testHypenatedLastName() {
 		myHuman.setLName("Rutherford-Morrison");
 		assertEquals("Rutherford-Morrison", myHuman.getLName());
 	}
-	
+
 	@Test
 	public void testDoubleHypenatedLastName() {
 		myHuman.setLName("Rutherford-Morrison-Maguire");
 		assertEquals("Rutherford-Morrison-Maguire", myHuman.getLName());
 	}
-	
+
 	@Test
 	public void testLastNameWithSpaceCommaFullStop() {
 		myHuman.setLName("Luther King, Jr.");
@@ -130,7 +130,7 @@ public class HumanTests {
 		myHuman.setLName("R+bb");
 		assertEquals("R+bb", myHuman.getLName());
 	}
-	
+
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetLastNameFullStopAtStart() {
 		myHuman.setLName(".Robb");
@@ -155,24 +155,55 @@ public class HumanTests {
 		assertEquals("R0bb", myHuman.getLName());
 	}
 
-
+	// Age tests
 	@Test
 	public void testGetAge() {
 		assertEquals(23, myHuman.getAge());
 	}
 
 	@Test
-	public void testSetAge() {
-		myHuman.setAge(23);
-		assertEquals(23, myHuman.getAge());
+	public void testSetMiddleAge() {
+		myHuman.setAge(65);
+		assertEquals(65, myHuman.getAge());
+	}
+
+	@Test
+	public void testSetMinAge() {
+		myHuman.setAge(0);
+		assertEquals(0, myHuman.getAge());
+	}
+
+	@Test
+	public void testSetAboveMinAge() {
+		myHuman.setAge(1);
+		assertEquals(1, myHuman.getAge());
 	}
 
 	@Test(expected = IllegalArgumentException.class)
-	public void testSetAgeNegativeAgeException() {
+	public void testSetBelowMinAgeException() {
 		myHuman.setAge(-1);
 		assertEquals(-1, myHuman.getAge());
 	}
 
+	@Test
+	public void testSetBelowMaxAge() {
+		myHuman.setAge(129);
+		assertEquals(129, myHuman.getAge());
+	}
+
+	@Test
+	public void testSetMaxAge() {
+		myHuman.setAge(130);
+		assertEquals(130, myHuman.getAge());
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetAboveMaxAgeException() {
+		myHuman.setAge(131);
+		assertEquals(131, myHuman.getAge());
+	}
+
+	// Weight tests
 	@Test
 	public void testGetWeightInPounds() {
 		assertEquals(140, myHuman.getWeightInPounds());
