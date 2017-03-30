@@ -3,7 +3,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class HumanTests {
-	private Human myHuman = new Human("Joe", "Bloggs", "Deerpark", 140, 185, 23);
+	private Human myHuman = new Human("Joe", "Bloggs", 140, 185, 23);
 
 	// First name tests
 	@Test

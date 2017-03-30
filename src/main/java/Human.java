@@ -6,7 +6,6 @@ public final class Human {
 
 	private String fname;
 	private String lname;
-	private String address;
 	private int weight;
 	private int height;
 	private int age;
@@ -14,16 +13,14 @@ public final class Human {
 	public Human() {
 		fname = null;
 		lname = null;
-		address = null;
 		weight = 0;
 		height = 0;
 		age = 0;
 	}
 
-	public Human(String fn, String ln, String a, int w, int h, int ag) {
+	public Human(String fn, String ln, int w, int h, int ag) {
 		fname = fn;
 		lname = ln;
-		address = a;
 		weight = w;
 		height = h;
 		age = ag;
@@ -75,14 +72,6 @@ public final class Human {
 			throw new IllegalArgumentException("Last name can only be alphabetic with apostrophe or hyphen.",
 					null);
 		}
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
 	}
 
 	public int getWeightInPounds() {
