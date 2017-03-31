@@ -1,9 +1,10 @@
 import static org.junit.Assert.assertEquals;
-
+import java.time.LocalDate;
 import org.junit.Test;
 
+
 public class HumanTests {
-	private Human myHuman = new Human("Joe", "Bloggs", 140, 185, 23);
+	private Human myHuman = new Human("Joe", "Bloggs", 140, 185, 23, 23);
 
 	// First name tests
 	@Test
@@ -298,5 +299,61 @@ public class HumanTests {
 		myHuman.setHeightInCentimeters(276);
 		assertEquals(276, myHuman.getHeightInCentimeters());
 	}
+	
+	
+	//Date of birth tests
+	@Test
+	public void testGetAgeFromDateOfBirth() {
+		assertEquals(23, myHuman.getAgeFromDateOfBirth());
+	}
+	
+    @Test
+    public void testSetAgeFromDateMiddleAge() {
+        LocalDate dateOfBirth = LocalDate.of(1952, 01, 01);
+        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+        assertEquals(65, actualDate);
+    }
+    
+    @Test
+    public void testSetAgeFromDateMinAge() {
+        LocalDate dateOfBirth = LocalDate.of(2017, 3, 31);
+        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+        assertEquals(0, actualDate);
+    }
+    
+    @Test
+    public void testSetAgeFromDateAboveMinAge() {
+        LocalDate dateOfBirth = LocalDate.of(2016, 3, 30);
+        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+        assertEquals(1, actualDate);
+    }
+    
+	@Test(expected = IllegalArgumentException.class)
+    public void testSetAgeFromDateBelowMinAge() {
+        LocalDate dateOfBirth = LocalDate.of(2018, 3, 31);
+        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+        assertEquals(0, actualDate);
+    }
+	
+	@Test
+    public void testSetAgeFromDateMaxAge() {
+        LocalDate dateOfBirth = LocalDate.of(1887, 01, 01);
+        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+        assertEquals(130, actualDate);
+    }
+    
+	@Test(expected = IllegalArgumentException.class)
+    public void testSetAgeFromDateAboveMaxAge() {
+        LocalDate dateOfBirth = LocalDate.of(1886, 12, 31);
+        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+        assertEquals(131, actualDate);
+    }
+	
+	@Test
+    public void testSetAgeFromDateBelowMaxAge() {
+        LocalDate dateOfBirth = LocalDate.of(1888, 01, 01);
+        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+        assertEquals(129, actualDate);
+    }
 
 }

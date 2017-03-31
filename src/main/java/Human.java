@@ -1,7 +1,12 @@
+import java.time.LocalDate;
+import java.time.Period;
+
 /**
  * @author Eugene
  *
  */
+
+
 public final class Human {
 
 	private String fname;
@@ -9,6 +14,7 @@ public final class Human {
 	private int weight;
 	private int height;
 	private int age;
+	private int dateOfBirth;
 
 	public Human() {
 		fname = null;
@@ -16,14 +22,17 @@ public final class Human {
 		weight = 0;
 		height = 0;
 		age = 0;
+		dateOfBirth = 0;
 	}
 
-	public Human(String fn, String ln, int w, int h, int ag) {
+	public Human(String fn, String ln, int w, int h, int ag, int dob) {
 		fname = fn;
 		lname = ln;
 		weight = w;
 		height = h;
 		age = ag;
+		dateOfBirth = dob;
+
 	}
 
 	public String getFName() {
@@ -108,6 +117,21 @@ public final class Human {
 		} else {
 			this.age = age;
 		}
-	}
-
+	} 
+	
+    public int getAgeFromDateOfBirth(){
+    	return dateOfBirth;
+    }
+	
+    public int setAgeFromDate(LocalDate birthDate, LocalDate currentDate) {
+    	LocalDate maxAge = LocalDate.of(1887, 01, 01);
+    	LocalDate minAge = LocalDate.now();
+    	
+    	if (birthDate.isBefore(maxAge) || birthDate.isAfter(minAge)) {
+			throw new IllegalArgumentException("Year must be within todays date and 1887/01/01");
+        } else {
+            return this.dateOfBirth = Period.between(birthDate, currentDate).getYears();
+        }
+    }
+    
 }
