@@ -6,7 +6,6 @@ import java.time.Period;
  *
  */
 
-
 public final class Human {
 
 	private String fname;
@@ -15,6 +14,7 @@ public final class Human {
 	private int height;
 	private int age;
 	private int dateOfBirth;
+	private Gender gender;
 
 	public Human() {
 		fname = null;
@@ -25,20 +25,21 @@ public final class Human {
 		dateOfBirth = 0;
 	}
 
-	public Human(String fn, String ln, int w, int h, int ag, int dob) {
+	public Human(String fn, String ln, int w, int h, int ag, int dob, Gender gender) {
 		fname = fn;
 		lname = ln;
 		weight = w;
 		height = h;
 		age = ag;
 		dateOfBirth = dob;
+		this.gender = gender;
 
 	}
 
 	public String getFName() {
 		return fname;
 	}
-	
+
 	public String getLName() {
 		return lname;
 	}
@@ -52,34 +53,31 @@ public final class Human {
 	public static boolean validateFName(String fname) {
 		return fname.matches("[a-zA-záéíóú]+([ '-][a-zA-Z]+)*");
 	}
-	
+
 	/*
 	 * regex for last name allows for hyphenated names names with apostrophes
-	 * names with spaces Irish names with fadas, names with commas and full stops
+	 * names with spaces Irish names with fadas, names with commas and full
+	 * stops
 	 * 
 	 */
 	public static boolean validateLName(String lname) {
 		return lname.matches("^\\p{L}+[\\p{L}\\p{Z}\\p{P}]{0,}");
 	}
-	
 
 	public void setFName(String fname) {
 		if (validateFName(fname) == true) {
 			this.fname = fname;
 		} else {
-			throw new IllegalArgumentException("First name can only be alphabetic with apostrophe or hyphen.",
-					null);
+			throw new IllegalArgumentException("First name can only be alphabetic with apostrophe or hyphen.", null);
 		}
 
 	}
-
 
 	public void setLName(String lname) {
 		if (validateLName(lname) == true) {
 			this.lname = lname;
 		} else {
-			throw new IllegalArgumentException("Last name can only be alphabetic with apostrophe or hyphen.",
-					null);
+			throw new IllegalArgumentException("Last name can only be alphabetic with apostrophe or hyphen.", null);
 		}
 	}
 
@@ -117,21 +115,29 @@ public final class Human {
 		} else {
 			this.age = age;
 		}
-	} 
-	
-    public int getAgeFromDateOfBirth(){
-    	return dateOfBirth;
-    }
-	
-    public int setAgeFromDate(LocalDate birthDate, LocalDate currentDate) {
-    	LocalDate maxAge = LocalDate.of(1887, 01, 01);
-    	LocalDate minAge = LocalDate.now();
-    	
-    	if (birthDate.isBefore(maxAge) || birthDate.isAfter(minAge)) {
+	}
+
+	public int getAgeFromDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public int setAgeFromDate(LocalDate birthDate, LocalDate currentDate) {
+		LocalDate maxAge = LocalDate.of(1887, 01, 01);
+		LocalDate minAge = LocalDate.now();
+
+		if (birthDate.isBefore(maxAge) || birthDate.isAfter(minAge)) {
 			throw new IllegalArgumentException("Year must be within todays date and 1887/01/01");
-        } else {
-            return this.dateOfBirth = Period.between(birthDate, currentDate).getYears();
-        }
-    }
-    
+		} else {
+			return this.dateOfBirth = Period.between(birthDate, currentDate).getYears();
+		}
+	}
+
+	public Gender getGender() {
+		return gender;
+	}
+
+	public void setGender(Gender gender) {
+		this.gender = gender;
+	}
+
 }

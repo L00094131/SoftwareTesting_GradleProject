@@ -2,11 +2,10 @@ import static org.junit.Assert.assertEquals;
 import java.time.LocalDate;
 import org.junit.Test;
 
-
 public class HumanTests {
-	private Human myHuman = new Human("Joe", "Bloggs", 140, 185, 23, 23);
+	private Human myHuman = new Human("Joe", "Bloggs", 140, 185, 23, 23, Gender.MALE);
 
-	// First name tests
+	// First name JUnit tests
 	@Test
 	public void testGetFirstName() {
 		assertEquals("Joe", myHuman.getFName());
@@ -78,7 +77,8 @@ public class HumanTests {
 		assertEquals("Eugene", myHuman.getFName());
 	}
 
-	// Second name tests
+
+	// Second name JUnit tests
 	@Test
 	public void testGetLastName() {
 		assertEquals("Bloggs", myHuman.getLName());
@@ -239,13 +239,13 @@ public class HumanTests {
 		myHuman.setWeightInPounds(1);
 		assertEquals(1, myHuman.getWeightInPounds());
 	}
-	
+
 	@Test
 	public void testSetAboveMinWeightInPounds() {
 		myHuman.setWeightInPounds(2);
 		assertEquals(2, myHuman.getWeightInPounds());
 	}
-	
+
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetBelowMinWeightInPoundsException() {
 		myHuman.setWeightInPounds(0);
@@ -263,13 +263,13 @@ public class HumanTests {
 		myHuman.setHeightInCentimeters(137);
 		assertEquals(137, myHuman.getHeightInCentimeters());
 	}
-	
+
 	@Test
 	public void testSetMinHeightInCentimeters() {
 		myHuman.setHeightInCentimeters(20);
 		assertEquals(20, myHuman.getHeightInCentimeters());
 	}
-	
+
 	@Test
 	public void testSetAboveMinHeightInCentimeters() {
 		myHuman.setHeightInCentimeters(21);
@@ -287,73 +287,84 @@ public class HumanTests {
 		myHuman.setHeightInCentimeters(275);
 		assertEquals(275, myHuman.getHeightInCentimeters());
 	}
-	
+
 	@Test
 	public void testSetBelowMaxHeightInCentimeters() {
 		myHuman.setHeightInCentimeters(274);
 		assertEquals(274, myHuman.getHeightInCentimeters());
 	}
-	
+
 	@Test(expected = IllegalArgumentException.class)
 	public void testSetAboveMaxHeightInCentimetersException() {
 		myHuman.setHeightInCentimeters(276);
 		assertEquals(276, myHuman.getHeightInCentimeters());
 	}
-	
-	
-	//Date of birth tests
+
+	// Date of birth JUnit tests
 	@Test
 	public void testGetAgeFromDateOfBirth() {
 		assertEquals(23, myHuman.getAgeFromDateOfBirth());
 	}
-	
-    @Test
-    public void testSetAgeFromDateMiddleAge() {
-        LocalDate dateOfBirth = LocalDate.of(1952, 01, 01);
-        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
-        assertEquals(65, actualDate);
-    }
-    
-    @Test
-    public void testSetAgeFromDateMinAge() {
-        LocalDate dateOfBirth = LocalDate.of(2017, 3, 31);
-        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
-        assertEquals(0, actualDate);
-    }
-    
-    @Test
-    public void testSetAgeFromDateAboveMinAge() {
-        LocalDate dateOfBirth = LocalDate.of(2016, 3, 30);
-        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
-        assertEquals(1, actualDate);
-    }
-    
+
+	@Test
+	public void testSetAgeFromDateMiddleAge() {
+		LocalDate dateOfBirth = LocalDate.of(1952, 01, 01);
+		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+		assertEquals(65, actualDate);
+	}
+
+	@Test
+	public void testSetAgeFromDateMinAge() {
+		LocalDate dateOfBirth = LocalDate.of(2017, 3, 31);
+		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+		assertEquals(0, actualDate);
+	}
+
+	@Test
+	public void testSetAgeFromDateAboveMinAge() {
+		LocalDate dateOfBirth = LocalDate.of(2016, 3, 30);
+		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+		assertEquals(1, actualDate);
+	}
+
 	@Test(expected = IllegalArgumentException.class)
-    public void testSetAgeFromDateBelowMinAge() {
-        LocalDate dateOfBirth = LocalDate.of(2018, 3, 31);
-        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
-        assertEquals(0, actualDate);
-    }
+	public void testSetAgeFromDateBelowMinAge() {
+		LocalDate dateOfBirth = LocalDate.of(2018, 3, 31);
+		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+		assertEquals(0, actualDate);
+	}
+
+	@Test
+	public void testSetAgeFromDateMaxAge() {
+		LocalDate dateOfBirth = LocalDate.of(1887, 01, 01);
+		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+		assertEquals(130, actualDate);
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetAgeFromDateAboveMaxAge() {
+		LocalDate dateOfBirth = LocalDate.of(1886, 12, 31);
+		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+		assertEquals(131, actualDate);
+	}
+
+	@Test
+	public void testSetAgeFromDateBelowMaxAge() {
+		LocalDate dateOfBirth = LocalDate.of(1888, 01, 01);
+		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
+		assertEquals(129, actualDate);
+	}
+	
+	//Gender JUnit tests
+	@Test
+	public void testGetGender(){
+		assertEquals(Gender.MALE, myHuman.getGender());
+	}
 	
 	@Test
-    public void testSetAgeFromDateMaxAge() {
-        LocalDate dateOfBirth = LocalDate.of(1887, 01, 01);
-        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
-        assertEquals(130, actualDate);
-    }
-    
-	@Test(expected = IllegalArgumentException.class)
-    public void testSetAgeFromDateAboveMaxAge() {
-        LocalDate dateOfBirth = LocalDate.of(1886, 12, 31);
-        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
-        assertEquals(131, actualDate);
-    }
-	
-	@Test
-    public void testSetAgeFromDateBelowMaxAge() {
-        LocalDate dateOfBirth = LocalDate.of(1888, 01, 01);
-        int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
-        assertEquals(129, actualDate);
-    }
+	public void testSetGender(){
+		myHuman.setGender(Gender.OTHER);
+		assertEquals(Gender.OTHER, myHuman.getGender());
+	}
 
 }
