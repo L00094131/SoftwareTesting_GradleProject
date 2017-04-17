@@ -325,21 +325,21 @@ public class HumanTests {
 		assertEquals(23, myHuman.getAgeFromDateOfBirth());
 	}
 
-	@Test(timeout=10)
+	@Test
 	public void testSetAgeFromDateMiddleAge() {
 		LocalDate dateOfBirth = LocalDate.of(1952, 01, 01);
 		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
 		assertEquals(65, actualDate);
 	}
 
-	@Test(timeout=10)
+	@Test
 	public void testSetAgeFromDateMinAge() {
 		LocalDate dateOfBirth = LocalDate.of(2017, 3, 31);
 		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
 		assertEquals(0, actualDate);
 	}
 
-	@Test(timeout=10)
+	@Test
 	public void testSetAgeFromDateAboveMinAge() {
 		LocalDate dateOfBirth = LocalDate.of(2016, 3, 30);
 		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
@@ -353,7 +353,7 @@ public class HumanTests {
 		assertEquals(0, actualDate);
 	}
 
-	@Test(timeout=10)
+	@Test
 	public void testSetAgeFromDateMaxAge() {
 		LocalDate dateOfBirth = LocalDate.of(1887, 01, 01);
 		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());

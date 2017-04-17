@@ -1,20 +1,47 @@
 
 public class Address {
-	private String address;
+	private String country;
+	private String county;
+	private String town;
 	private Eircode eircode = null;
 	
-	public Address(String a, String e){
-		address=a;
-		this.eircode= new Eircode(e);
+	public Address(String country, Eircode eircode, String county, String town){
+		this.country=country;
+		this.eircode= eircode;
+		this.county=county;
+		this.town=town;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getCountry() {
+		return country;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setCountry(String country) {
+		this.country = country;
 	}
-	
+
+	public String getCounty() {
+		return county;
+	}
+
+	public void setCounty(String county) {
+		this.county = county;
+	}
+
+	public String getTown() {
+		return town;
+	}
+
+	public void setTown(String town) {
+		this.town = town;
+	}
+
+	public Eircode getEircode() {
+		return eircode;
+	}
+
+	public void setEircode(Eircode eircode) {
+		this.eircode = eircode;
+	}
 	
 }

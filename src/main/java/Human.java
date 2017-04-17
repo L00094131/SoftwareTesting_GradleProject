@@ -26,12 +26,12 @@ public final class Human {
 //	}
 
 	public Human(String fn, String ln, int w, double h, int ag, int dob, Gender g) {
-		fname = fn;
-		lname = ln;
-		weight = w;
-		height = h;
-		age = ag;
-		dateOfBirth = dob;
+		this.fname = fn;
+		this.lname = ln;
+		this.weight = w;
+		this.height = h;
+		this.age = ag;
+		this.dateOfBirth = dob;
 		this.gender = g;
 
 	}
