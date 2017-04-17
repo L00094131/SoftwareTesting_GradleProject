@@ -284,6 +284,11 @@ public class HumanTests {
 		myHuman.setHeightInCentimeters(20.0);
 		assertThat(myHuman.getHeightInCentimeters(), is(equalTo(20.0)));
 	}
+	@Test
+	public void testSetMinHeightInCentimeters1() {
+		myHuman.setHeightInCentimeters(20.0);
+		assertThat(myHuman.getHeightInCentimeters(), is(equalTo(20.0)));
+	}
 
 	@Test
 	public void testSetAboveMinHeightInCentimeters() {
