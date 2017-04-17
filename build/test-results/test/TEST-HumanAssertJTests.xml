@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="HumanAssertJTests" tests="10" skipped="0" failures="0" errors="0" timestamp="2017-04-17T16:07:21" hostname="Eugene" time="0.583">
+  <properties/>
+  <testcase name="testLNameNotEqualToFName" classname="HumanAssertJTests" time="0.313"/>
+  <testcase name="testContainsHyphenTwice" classname="HumanAssertJTests" time="0.001"/>
+  <testcase name="testIsEqualToFName" classname="HumanAssertJTests" time="0.008"/>
+  <testcase name="testFNameNotEmpty" classname="HumanAssertJTests" time="0.0"/>
+  <testcase name="testWeightIsGreaterThanAge" classname="HumanAssertJTests" time="0.014"/>
+  <testcase name="testStartAndEndFName" classname="HumanAssertJTests" time="0.004"/>
+  <testcase name="testStartAndEndLName" classname="HumanAssertJTests" time="0.004"/>
+  <testcase name="testLNameContains" classname="HumanAssertJTests" time="0.002"/>
+  <testcase name="testContainsHyphenOnce" classname="HumanAssertJTests" time="0.0"/>
+  <testcase name="testGenderContains" classname="HumanAssertJTests" time="0.092"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

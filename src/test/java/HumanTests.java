@@ -264,42 +264,6 @@ public class HumanTests {
 		assertEquals(0, myHuman.getWeightInPounds());
 	}
 
-	// Height tests
-	/*
-	 * @Test public void testGetHeightInCentimeters() { assertEquals(185.0,
-	 * myHuman.getHeightInCentimeters()); }
-	 * 
-	 * @Test public void testSetMiddleHeightInCentimeters() {
-	 * myHuman.setHeightInCentimeters(137.0); assertEquals(137.0,
-	 * myHuman.getHeightInCentimeters()); }
-	 * 
-	 * @Test public void testSetMinHeightInCentimeters() {
-	 * myHuman.setHeightInCentimeters(20); assertEquals(20,
-	 * myHuman.getHeightInCentimeters()); }
-	 * 
-	 * @Test public void testSetAboveMinHeightInCentimeters() {
-	 * myHuman.setHeightInCentimeters(21); assertEquals(21,
-	 * myHuman.getHeightInCentimeters()); }
-	 * 
-	 * @Test(expected = IllegalArgumentException.class) public void
-	 * testSetBelowMinHeightInCentimetersException() {
-	 * myHuman.setHeightInCentimeters(19); assertEquals(19,
-	 * myHuman.getHeightInCentimeters()); }
-	 * 
-	 * @Test public void testSetMaxHeightInCentimeters() {
-	 * myHuman.setHeightInCentimeters(275); assertEquals(275,
-	 * myHuman.getHeightInCentimeters()); }
-	 * 
-	 * @Test public void testSetBelowMaxHeightInCentimeters() {
-	 * myHuman.setHeightInCentimeters(274); assertEquals(274,
-	 * myHuman.getHeightInCentimeters()); }
-	 * 
-	 * @Test(expected = IllegalArgumentException.class) public void
-	 * testSetAboveMaxHeightInCentimetersException() {
-	 * myHuman.setHeightInCentimeters(276); assertEquals(276,
-	 * myHuman.getHeightInCentimeters()); }
-	 */
-
 	// Hamcrest tests for height 
 	@Rule
 	public ExpectedException exceptionGrabber = ExpectedException.none();
@@ -361,21 +325,21 @@ public class HumanTests {
 		assertEquals(23, myHuman.getAgeFromDateOfBirth());
 	}
 
-	@Test
+	@Test(timeout=10)
 	public void testSetAgeFromDateMiddleAge() {
 		LocalDate dateOfBirth = LocalDate.of(1952, 01, 01);
 		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
 		assertEquals(65, actualDate);
 	}
 
-	@Test
+	@Test(timeout=10)
 	public void testSetAgeFromDateMinAge() {
 		LocalDate dateOfBirth = LocalDate.of(2017, 3, 31);
 		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
 		assertEquals(0, actualDate);
 	}
 
-	@Test
+	@Test(timeout=10)
 	public void testSetAgeFromDateAboveMinAge() {
 		LocalDate dateOfBirth = LocalDate.of(2016, 3, 30);
 		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
@@ -389,7 +353,7 @@ public class HumanTests {
 		assertEquals(0, actualDate);
 	}
 
-	@Test
+	@Test(timeout=10)
 	public void testSetAgeFromDateMaxAge() {
 		LocalDate dateOfBirth = LocalDate.of(1887, 01, 01);
 		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
@@ -415,9 +379,15 @@ public class HumanTests {
 	public void testGetGender() {
 		assertEquals(Gender.MALE, myHuman.getGender());
 	}
+	
+	@Test
+	public void testSetGenderFemale() {
+		myHuman.setGender(Gender.FEMALE);
+		assertEquals(Gender.FEMALE, myHuman.getGender());
+	}
 
 	@Test
-	public void testSetGender() {
+	public void testSetGenderOther() {
 		myHuman.setGender(Gender.OTHER);
 		assertEquals(Gender.OTHER, myHuman.getGender());
 	}

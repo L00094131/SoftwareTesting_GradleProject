@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EircodeTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-03-31T15:03:28" hostname="Eugene" time="0.011">
+<testsuite name="EircodeTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2017-04-17T16:07:21" hostname="Eugene" time="0.031">
   <properties/>
-  <testcase name="testEircodeTooShort" classname="EircodeTests" time="0.004"/>
+  <testcase name="testEircodeTooShort" classname="EircodeTests" time="0.024"/>
   <testcase name="testEircodeTooLong" classname="EircodeTests" time="0.001"/>
-  <testcase name="testGetEircode" classname="EircodeTests" time="0.0"/>
+  <testcase name="testGetEircode" classname="EircodeTests" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
