@@ -7,34 +7,36 @@ import java.time.Period;
  */
 
 public final class Human {
-
+	
 	private String fname;
 	private String lname;
 	private int weight;
-	private int height;
+	private double height;
 	private int age;
 	private int dateOfBirth;
 	private Gender gender;
 
-	public Human() {
-		fname = null;
-		lname = null;
-		weight = 0;
-		height = 0;
-		age = 0;
-		dateOfBirth = 0;
-	}
+//	public Human() {
+//		fname = null;
+//		lname = null;
+//		weight = 0;
+//		height = 0;
+//		age = 0;
+//		dateOfBirth = 0;
+//	}
 
-	public Human(String fn, String ln, int w, int h, int ag, int dob, Gender gender) {
+	public Human(String fn, String ln, int w, double h, int ag, int dob, Gender g) {
 		fname = fn;
 		lname = ln;
 		weight = w;
 		height = h;
 		age = ag;
 		dateOfBirth = dob;
-		this.gender = gender;
+		this.gender = g;
 
 	}
+
+
 
 	public String getFName() {
 		return fname;
@@ -93,13 +95,13 @@ public final class Human {
 		}
 	}
 
-	public int getHeightInCentimeters() {
+	public double getHeightInCentimeters() {
 		return height;
 	}
 
-	public void setHeightInCentimeters(int height) {
-		if (height > 275 || height < 20) {
-			throw new IllegalArgumentException("Height must be within the range 0-275cm");
+	public void setHeightInCentimeters(double height) {
+		if (height > 275.0 || height < 20.0) {
+			throw new IllegalArgumentException("Height must be within the range 20.0cm - 275.0cm");
 		} else {
 			this.height = height;
 		}

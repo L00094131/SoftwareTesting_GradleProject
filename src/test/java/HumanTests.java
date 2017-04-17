@@ -1,9 +1,22 @@
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.startsWith;
 import static org.junit.Assert.assertEquals;
 import java.time.LocalDate;
+
+import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
 
 public class HumanTests {
-	private Human myHuman = new Human("Joe", "Bloggs", 140, 185, 23, 23, Gender.MALE);
+	private Human myHuman;
+	
+	@Before
+	public void setUpHuman() {
+		myHuman = new Human("Joe", "Bloggs", 140, 185.0, 23, 23, Gender.MALE);
+	}
 
 	// First name JUnit tests
 	@Test
@@ -76,7 +89,6 @@ public class HumanTests {
 		myHuman.setFName("Eugene");
 		assertEquals("Eugene", myHuman.getFName());
 	}
-
 
 	// Second name JUnit tests
 	@Test
@@ -253,51 +265,94 @@ public class HumanTests {
 	}
 
 	// Height tests
+	/*
+	 * @Test public void testGetHeightInCentimeters() { assertEquals(185.0,
+	 * myHuman.getHeightInCentimeters()); }
+	 * 
+	 * @Test public void testSetMiddleHeightInCentimeters() {
+	 * myHuman.setHeightInCentimeters(137.0); assertEquals(137.0,
+	 * myHuman.getHeightInCentimeters()); }
+	 * 
+	 * @Test public void testSetMinHeightInCentimeters() {
+	 * myHuman.setHeightInCentimeters(20); assertEquals(20,
+	 * myHuman.getHeightInCentimeters()); }
+	 * 
+	 * @Test public void testSetAboveMinHeightInCentimeters() {
+	 * myHuman.setHeightInCentimeters(21); assertEquals(21,
+	 * myHuman.getHeightInCentimeters()); }
+	 * 
+	 * @Test(expected = IllegalArgumentException.class) public void
+	 * testSetBelowMinHeightInCentimetersException() {
+	 * myHuman.setHeightInCentimeters(19); assertEquals(19,
+	 * myHuman.getHeightInCentimeters()); }
+	 * 
+	 * @Test public void testSetMaxHeightInCentimeters() {
+	 * myHuman.setHeightInCentimeters(275); assertEquals(275,
+	 * myHuman.getHeightInCentimeters()); }
+	 * 
+	 * @Test public void testSetBelowMaxHeightInCentimeters() {
+	 * myHuman.setHeightInCentimeters(274); assertEquals(274,
+	 * myHuman.getHeightInCentimeters()); }
+	 * 
+	 * @Test(expected = IllegalArgumentException.class) public void
+	 * testSetAboveMaxHeightInCentimetersException() {
+	 * myHuman.setHeightInCentimeters(276); assertEquals(276,
+	 * myHuman.getHeightInCentimeters()); }
+	 */
+
+	// Hamcrest tests for height 
+	@Rule
+	public ExpectedException exceptionGrabber = ExpectedException.none();
+
 	@Test
 	public void testGetHeightInCentimeters() {
-		assertEquals(185, myHuman.getHeightInCentimeters());
+		assertThat(myHuman.getHeightInCentimeters(), is(equalTo(185.0)));
 	}
 
 	@Test
 	public void testSetMiddleHeightInCentimeters() {
-		myHuman.setHeightInCentimeters(137);
-		assertEquals(137, myHuman.getHeightInCentimeters());
+		myHuman.setHeightInCentimeters(137.5);
+		assertThat(myHuman.getHeightInCentimeters(), is(equalTo(137.5)));
 	}
 
 	@Test
 	public void testSetMinHeightInCentimeters() {
-		myHuman.setHeightInCentimeters(20);
-		assertEquals(20, myHuman.getHeightInCentimeters());
+		myHuman.setHeightInCentimeters(20.0);
+		assertThat(myHuman.getHeightInCentimeters(), is(equalTo(20.0)));
 	}
 
 	@Test
 	public void testSetAboveMinHeightInCentimeters() {
-		myHuman.setHeightInCentimeters(21);
-		assertEquals(21, myHuman.getHeightInCentimeters());
+		myHuman.setHeightInCentimeters(20.1);
+		assertThat(myHuman.getHeightInCentimeters(), is(equalTo(20.1)));
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void testSetBelowMinHeightInCentimetersException() {
-		myHuman.setHeightInCentimeters(19);
-		assertEquals(19, myHuman.getHeightInCentimeters());
+		exceptionGrabber.expect(IllegalArgumentException.class);
+		exceptionGrabber.expectMessage(startsWith("Height must be within the range 20.0cm - 275.0cm"));
+		myHuman.setHeightInCentimeters(19.9);
+		assertThat(myHuman.getHeightInCentimeters(), is(equalTo(19.9)));
 	}
 
 	@Test
 	public void testSetMaxHeightInCentimeters() {
-		myHuman.setHeightInCentimeters(275);
-		assertEquals(275, myHuman.getHeightInCentimeters());
+		myHuman.setHeightInCentimeters(275.0);
+		assertThat(myHuman.getHeightInCentimeters(), is(equalTo(275.0)));
 	}
 
 	@Test
 	public void testSetBelowMaxHeightInCentimeters() {
-		myHuman.setHeightInCentimeters(274);
-		assertEquals(274, myHuman.getHeightInCentimeters());
+		myHuman.setHeightInCentimeters(274.9);
+		assertThat(myHuman.getHeightInCentimeters(), is(equalTo(274.9)));
 	}
 
-	@Test(expected = IllegalArgumentException.class)
+	@Test
 	public void testSetAboveMaxHeightInCentimetersException() {
-		myHuman.setHeightInCentimeters(276);
-		assertEquals(276, myHuman.getHeightInCentimeters());
+		exceptionGrabber.expect(IllegalArgumentException.class);
+		exceptionGrabber.expectMessage(startsWith("Height must be within the range 20.0cm - 275.0cm"));
+		myHuman.setHeightInCentimeters(275.1);
+		assertThat(myHuman.getHeightInCentimeters(), is(equalTo(275.1)));
 	}
 
 	// Date of birth JUnit tests
@@ -354,15 +409,15 @@ public class HumanTests {
 		int actualDate = myHuman.setAgeFromDate(dateOfBirth, LocalDate.now());
 		assertEquals(129, actualDate);
 	}
-	
-	//Gender JUnit tests
+
+	// Gender JUnit tests
 	@Test
-	public void testGetGender(){
+	public void testGetGender() {
 		assertEquals(Gender.MALE, myHuman.getGender());
 	}
-	
+
 	@Test
-	public void testSetGender(){
+	public void testSetGender() {
 		myHuman.setGender(Gender.OTHER);
 		assertEquals(Gender.OTHER, myHuman.getGender());
 	}

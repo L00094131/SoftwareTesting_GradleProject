@@ -4,11 +4,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class HumanAssertJTests {
-	Human myHuman;
+	private Human myHuman;
 
 	@Before
 	public void setUpHuman() {
-		myHuman = new Human("Billy-Bob", "Thornton", 160, 195, 61, 61, Gender.MALE);
+		myHuman = new Human("Billy-Bob", "Thornton", 160, 195.5, 61, 61, Gender.MALE);
 	}
 
 	// First name tests
