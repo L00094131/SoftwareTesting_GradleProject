@@ -7,7 +7,7 @@ public class AddressTests {
 	private Address myAddress;
 	Eircode eircode;
 	@Before
-	public void setUpHuman() {
+	public void setUpAddress() {
 		myAddress = new Address(eircode, "Ireland","Donegal","Burt");
 	}
 	
@@ -68,4 +68,16 @@ public class AddressTests {
 		myAddress.setCounty("Doneg4l");
 		assertEquals("Doneg4l", myAddress.getCounty());
 	}
+	
+	@Test
+	public void testGetTown() {
+		assertEquals("Burt", myAddress.getTown());
+	}
+	
+	@Test
+	public void testSetTown() {
+		myAddress.setTown("Letterkenny");
+		assertEquals("Letterkenny", myAddress.getTown());
+	}
+	
 }

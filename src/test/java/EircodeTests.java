@@ -11,11 +11,22 @@ import static org.mockito.Mockito.*;
 
 public class EircodeTests {
 
-
-	private Eircode validEircode1 = new Eircode ("F92 F1W8");
+	private Eircode myEircode;
+	private Eircode validEircode1 = new Eircode ("f92 f1w8");
 	private Address validAddress1 = new Address(validEircode1, "Ireland", "Donegal", "Burt");
 	private AddressProvider provider;
+	
+	@Before
+	public void setUpEircode() {
+		myEircode = new Eircode("F92 F1W8");
+	}
 
+	@Test
+	public void testGetEircode1() {
+		myEircode.setEircode("F92 F1W8");
+		assertEquals("F92 F1W8", myEircode.getEircode());
+	}
+	
 	// Test Eircode class using JUnit
 	@Test
 	public void testGetEircode() {
@@ -24,6 +35,7 @@ public class EircodeTests {
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testEircodeTooLong() {
+		
 		new Eircode("F92 F1W81");
 	}
 
