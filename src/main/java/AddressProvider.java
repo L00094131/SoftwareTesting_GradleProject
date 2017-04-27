@@ -3,6 +3,7 @@
 // will mock using mockito
 
 public class AddressProvider {
+	
 	public AddressProvider() {
 
 	}
