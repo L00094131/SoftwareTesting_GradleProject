@@ -4,7 +4,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 
-@SuiteClasses({ EircodeTests.class, HumanAssertJTests.class, HumanTests.class })
+@SuiteClasses({ EircodeTests.class, HumanAssertJTests.class, HumanTests.class, AddressTests.class })
 
 public class AllTests {
 	

@@ -22,28 +22,6 @@ public class Eircode {
 		return CanonicalEircode;
 	}
 	
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((eircode == null) ? 0 : eircode.hashCode());
-		return result;
-	}
-	
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Eircode other = (Eircode) obj;
-		if (eircode == null) {
-			if (other.eircode != null)
-				return false;
-		} else if (!eircode.equals(other.eircode))
-			return false;
-		return true;
-	}
 	
 	public String getEircode() {
 		return eircode;

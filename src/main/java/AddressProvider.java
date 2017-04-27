@@ -8,7 +8,7 @@ public class AddressProvider {
 
 	}
 
-	public Address getAddress(Eircode input) {
+	public Address getAddress(Eircode eircode) {
 		return null;
 	}
 

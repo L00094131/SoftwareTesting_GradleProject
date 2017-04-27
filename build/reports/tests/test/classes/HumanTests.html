@@ -23,13 +23,13 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">60</div>
+<div class="counter">124</div>
 <p>tests</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">2</div>
+<div class="counter">4</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.281s</div>
+<div class="counter">0.371s</div>
 <p>duration</p>
 </div>
 </td>
@@ -74,7 +74,73 @@
 <h3 class="failures">testFadaIrishLastName</h3>
 <span class="code">
 <pre>java.lang.IllegalArgumentException: Last name can only be alphabetic with apostrophe or hyphen.
-	at Human.setLName(Human.java:82)
+	at Human.setLName(Human.java:71)
+	at HumanTests.testFadaIrishLastName(HumanTests.java:155)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:239)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy3.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testFadaIrishLastName"></a>
+<h3 class="failures">testFadaIrishLastName</h3>
+<span class="code">
+<pre>java.lang.IllegalArgumentException: Last name can only be alphabetic with apostrophe or hyphen.
+	at Human.setLName(Human.java:71)
 	at HumanTests.testFadaIrishLastName(HumanTests.java:155)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -132,7 +198,73 @@
 <h3 class="failures">testFadaWithApostropheIrishLastName</h3>
 <span class="code">
 <pre>java.lang.IllegalArgumentException: Last name can only be alphabetic with apostrophe or hyphen.
-	at Human.setLName(Human.java:82)
+	at Human.setLName(Human.java:71)
+	at HumanTests.testFadaWithApostropheIrishLastName(HumanTests.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.rules.ExpectedException$ExpectedExceptionStatement.evaluate(ExpectedException.java:239)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy3.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:147)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:129)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="testFadaWithApostropheIrishLastName"></a>
+<h3 class="failures">testFadaWithApostropheIrishLastName</h3>
+<span class="code">
+<pre>java.lang.IllegalArgumentException: Last name can only be alphabetic with apostrophe or hyphen.
+	at Human.setLName(Human.java:71)
 	at HumanTests.testFadaWithApostropheIrishLastName(HumanTests.java:161)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -198,7 +330,17 @@
 </thead>
 <tr>
 <td class="success">testApostropheLastName</td>
-<td>0.001s</td>
+<td>0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testApostropheLastName</td>
+<td>0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testApostrophesFirstName</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -208,33 +350,68 @@
 </tr>
 <tr>
 <td class="success">testDoubleFadaIrishFirstName</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testDoubleFadaIrishFirstName</td>
 <td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testDoubleHypenatedFirstName</td>
-<td>0.006s</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testDoubleHypenatedFirstName</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testDoubleHypenatedLastName</td>
-<td>0.012s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="failures">testFadaIrishLastName</td>
-<td>0.042s</td>
-<td class="failures">failed</td>
-</tr>
-<tr>
-<td class="success">testFadaWithApostropheIrishFirstName</td>
 <td>0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="failures">testFadaWithApostropheIrishLastName</td>
-<td>0s</td>
+<td class="success">testDoubleHypenatedLastName</td>
+<td>0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">testFadaIrishLastName</td>
+<td>0.048s</td>
 <td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testFadaIrishLastName</td>
+<td>0.001s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">testFadaWithApostropheIrishFirstName</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testFadaWithApostropheIrishFirstName</td>
+<td>0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">testFadaWithApostropheIrishLastName</td>
+<td>0.010s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">testFadaWithApostropheIrishLastName</td>
+<td>0.001s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">testFailedDoubleHypenatedFirstName</td>
+<td>0.001s</td>
+<td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testFailedDoubleHypenatedFirstName</td>
@@ -247,13 +424,33 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testFirstNameWithSpace</td>
+<td>0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetAge</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testGetAge</td>
 <td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testGetAgeFromDateOfBirth</td>
-<td>0s</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetAgeFromDateOfBirth</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetFirstName</td>
+<td>0.005s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -267,7 +464,22 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testGetGender</td>
+<td>0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testGetHeightInCentimeters</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetHeightInCentimeters</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetLastName</td>
 <td>0.001s</td>
 <td class="success">passed</td>
 </tr>
@@ -278,12 +490,22 @@
 </tr>
 <tr>
 <td class="success">testGetWeightInPounds</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetWeightInPounds</td>
 <td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testHypenatedFirstName</td>
-<td>0s</td>
+<td>0.012s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testHypenatedFirstName</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -292,8 +514,23 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testHypenatedLastName</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testLastNameWithSpaceCommaFullStop</td>
-<td>0.009s</td>
+<td>0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testLastNameWithSpaceCommaFullStop</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetAboveMaxAgeException</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -303,27 +540,57 @@
 </tr>
 <tr>
 <td class="success">testSetAboveMaxHeightInCentimetersException</td>
-<td>0.108s</td>
+<td>0.037s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">testSetAboveMaxWeightInPoundsException</td>
-<td>0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">testSetAboveMinAge</td>
+<td class="success">testSetAboveMaxHeightInCentimetersException</td>
 <td>0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSetAboveMaxWeightInPoundsException</td>
+<td>0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetAboveMaxWeightInPoundsException</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetAboveMinAge</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetAboveMinAge</td>
+<td>0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testSetAboveMinHeightInCentimeters</td>
-<td>0.012s</td>
+<td>0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetAboveMinHeightInCentimeters</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetAboveMinWeightInPounds</td>
+<td>0.003s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSetAboveMinWeightInPounds</td>
 <td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetAgeFromDateAboveMaxAge</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -337,32 +604,72 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSetAgeFromDateAboveMinAge</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testSetAgeFromDateBelowMaxAge</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetAgeFromDateBelowMaxAge</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetAgeFromDateBelowMinAge</td>
 <td>0.004s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSetAgeFromDateBelowMinAge</td>
+<td>0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetAgeFromDateMaxAge</td>
 <td>0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSetAgeFromDateMaxAge</td>
-<td>0.001s</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSetAgeFromDateMiddleAge</td>
-<td>0.043s</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetAgeFromDateMiddleAge</td>
+<td>0.033s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSetAgeFromDateMinAge</td>
-<td>0.007s</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetAgeFromDateMinAge</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSetBelowMaxAge</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetBelowMaxAge</td>
+<td>0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetBelowMaxHeightInCentimeters</td>
 <td>0s</td>
 <td class="success">passed</td>
 </tr>
@@ -377,6 +684,16 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSetBelowMaxWeightInPounds</td>
+<td>0.008s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetBelowMinAgeException</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testSetBelowMinAgeException</td>
 <td>0s</td>
 <td class="success">passed</td>
@@ -387,8 +704,23 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSetBelowMinHeightInCentimetersException</td>
+<td>0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testSetBelowMinWeightInPoundsException</td>
 <td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetBelowMinWeightInPoundsException</td>
+<td>0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetFirstName</td>
+<td>0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -398,6 +730,16 @@
 </tr>
 <tr>
 <td class="success">testSetFirstNameWithNumber</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetFirstNameWithNumber</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetFirstNameWithSymbol</td>
 <td>0s</td>
 <td class="success">passed</td>
 </tr>
@@ -412,13 +754,43 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSetGenderFemale</td>
+<td>0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetGenderMale</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetGenderMale</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testSetGenderOther</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetGenderOther</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetLastName</td>
 <td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSetLastName</td>
-<td>0.001s</td>
+<td>0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetLastNameFullStopAtStart</td>
+<td>0s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -432,6 +804,16 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSetLastNameWithNumber</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetLastNameWithSymbol</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testSetLastNameWithSymbol</td>
 <td>0s</td>
 <td class="success">passed</td>
@@ -442,8 +824,18 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSetMaxAge</td>
+<td>0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testSetMaxHeightInCentimeters</td>
-<td>0s</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetMaxHeightInCentimeters</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -452,13 +844,28 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSetMaxWeightInPounds</td>
+<td>0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testSetMiddleAge</td>
-<td>0.006s</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetMiddleAge</td>
+<td>0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">testSetMiddleHeightInCentimeters</td>
-<td>0.007s</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetMiddleHeightInCentimeters</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -467,8 +874,23 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSetMiddleWeightInPounds</td>
+<td>0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testSetMinAge</td>
-<td>0s</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetMinAge</td>
+<td>0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSetMinHeightInCentimeters</td>
+<td>0.001s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
@@ -482,7 +904,22 @@
 <td class="success">passed</td>
 </tr>
 <tr>
+<td class="success">testSetMinWeightInPounds</td>
+<td>0.003s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">testSingleFadaIrishFirstName</td>
+<td>0.006s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSingleFadaIrishFirstName</td>
+<td>0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testSingleFadaIrishLastNameWithSpace</td>
 <td>0.002s</td>
 <td class="success">passed</td>
 </tr>
@@ -496,6 +933,21 @@
 <td>0.001s</td>
 <td class="success">passed</td>
 </tr>
+<tr>
+<td class="success">testSpaceLastName</td>
+<td>0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testValueOfGender</td>
+<td>0.005s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testValueOfGender</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
 </table>
 </div>
 </div>
@@ -506,7 +958,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 3.4.1</a> at 17-Apr-2017 17:07:23</p>
+<a href="http://www.gradle.org">Gradle 3.4.1</a> at 27-Apr-2017 17:09:31</p>
 </div>
 </div>
 </body>

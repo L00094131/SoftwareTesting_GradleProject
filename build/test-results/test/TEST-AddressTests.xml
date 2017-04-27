@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AddressTests" tests="14" skipped="0" failures="0" errors="0" timestamp="2017-04-27T16:09:29" hostname="Eugene" time="2.029">
+  <properties/>
+  <testcase name="testSetCountryWithHyphen" classname="AddressTests" time="0.009"/>
+  <testcase name="testSetCountry" classname="AddressTests" time="0.001"/>
+  <testcase name="testSetCountryTooMaxSize" classname="AddressTests" time="0.0"/>
+  <testcase name="testSetCountyWithDigitException" classname="AddressTests" time="0.001"/>
+  <testcase name="testGetCounty" classname="AddressTests" time="0.0"/>
+  <testcase name="testSetCountryWithDigitException" classname="AddressTests" time="0.0"/>
+  <testcase name="testGetCountry" classname="AddressTests" time="0.0"/>
+  <testcase name="testSetCountryWithHyphen" classname="AddressTests" time="0.0"/>
+  <testcase name="testSetCountry" classname="AddressTests" time="0.0"/>
+  <testcase name="testSetCountryTooMaxSize" classname="AddressTests" time="0.001"/>
+  <testcase name="testSetCountyWithDigitException" classname="AddressTests" time="0.0"/>
+  <testcase name="testGetCounty" classname="AddressTests" time="0.0"/>
+  <testcase name="testSetCountryWithDigitException" classname="AddressTests" time="0.0"/>
+  <testcase name="testGetCountry" classname="AddressTests" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
