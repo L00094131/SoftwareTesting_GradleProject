@@ -34,6 +34,9 @@ dependencies {
     // AssertJ 
     testCompile 'org.assertj:assertj-core:3.6.2'
     
+    // Mockito
+    testCompile "org.mockito:mockito-core:2.0.57-beta"
+    
 }
 
 jacocoTestReport {

@@ -7,7 +7,7 @@ import java.time.Period;
  */
 
 public final class Human {
-	
+
 	private String fname;
 	private String lname;
 	private int weight;
@@ -15,15 +15,6 @@ public final class Human {
 	private int age;
 	private int dateOfBirth;
 	private Gender gender;
-
-//	public Human() {
-//		fname = null;
-//		lname = null;
-//		weight = 0;
-//		height = 0;
-//		age = 0;
-//		dateOfBirth = 0;
-//	}
 
 	public Human(String fn, String ln, int w, double h, int ag, int dob, Gender g) {
 		this.fname = fn;
@@ -35,8 +26,6 @@ public final class Human {
 		this.gender = g;
 
 	}
-
-
 
 	public String getFName() {
 		return fname;

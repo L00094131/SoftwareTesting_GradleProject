@@ -284,11 +284,7 @@ public class HumanTests {
 		myHuman.setHeightInCentimeters(20.0);
 		assertThat(myHuman.getHeightInCentimeters(), is(equalTo(20.0)));
 	}
-	@Test
-	public void testSetMinHeightInCentimeters1() {
-		myHuman.setHeightInCentimeters(20.0);
-		assertThat(myHuman.getHeightInCentimeters(), is(equalTo(20.0)));
-	}
+
 
 	@Test
 	public void testSetAboveMinHeightInCentimeters() {
@@ -385,16 +381,30 @@ public class HumanTests {
 		assertEquals(Gender.MALE, myHuman.getGender());
 	}
 	
+
+	
 	@Test
 	public void testSetGenderFemale() {
 		myHuman.setGender(Gender.FEMALE);
 		assertEquals(Gender.FEMALE, myHuman.getGender());
+	}
+	
+	@Test
+	public void testSetGenderMale() {
+		myHuman.setGender(Gender.MALE);
+		assertEquals(Gender.MALE, myHuman.getGender());
 	}
 
 	@Test
 	public void testSetGenderOther() {
 		myHuman.setGender(Gender.OTHER);
 		assertEquals(Gender.OTHER, myHuman.getGender());
+
+	}
+	
+	@Test
+	public void testValueOfGender() {
+		Gender.valueOf(Gender.MALE.toString());
 	}
 
 }
