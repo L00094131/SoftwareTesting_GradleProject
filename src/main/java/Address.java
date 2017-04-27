@@ -42,6 +42,7 @@ public class Address {
 
 	public void setCounty(String county) {
 		if (validateCountryAndCounty(county) == true && validateCountySize(county)==true) {
+			county = county.substring(0,1).toUpperCase() + county.substring(1).toLowerCase();
 			this.county = county;
 		}else{
 			throw new IllegalArgumentException("County name can only be alphabetic.", null);
@@ -53,6 +54,7 @@ public class Address {
 	}
 
 	public void setTown(String town) {
+		town = town.substring(0,1).toUpperCase() + town.substring(1).toLowerCase();
 		this.town = town;
 	}
 

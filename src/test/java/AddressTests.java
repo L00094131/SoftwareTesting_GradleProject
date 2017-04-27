@@ -34,8 +34,8 @@ public class AddressTests {
 	}
 	
 	@Test
-	public void testSetCountryMaxSize() {
-		myAddress.setCounty("Londonderry");
+	public void testSetCountryMaxSizeAndLowercase() {
+		myAddress.setCounty("londonderry");
 		assertEquals("Londonderry", myAddress.getCounty());
 	}
 	
@@ -75,8 +75,8 @@ public class AddressTests {
 	}
 	
 	@Test
-	public void testSetTown() {
-		myAddress.setTown("Letterkenny");
+	public void testSetTownToUppercase() {
+		myAddress.setTown("letterkenny");
 		assertEquals("Letterkenny", myAddress.getTown());
 	}
 	

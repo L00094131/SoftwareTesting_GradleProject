@@ -12,30 +12,46 @@ import static org.mockito.Mockito.*;
 public class EircodeTests {
 
 	private Eircode myEircode;
-	private Eircode validEircode1 = new Eircode ("f92 f1w8");
-	private Address validAddress1 = new Address(validEircode1, "Ireland", "Donegal", "Burt");
+	private Eircode eircode1 = new Eircode ("f92 f1w8");
+	private Eircode eircode2 = new Eircode ("F92 FC93");
+	private Address address1 = new Address(eircode1, "Ireland", "Donegal", "Burt");
+	private Address address2 = new Address(eircode2, "Ireland", "Donegal", "Letterkenny");
 	private AddressProvider provider;
 	
+	// Test Eircode class using JUnit
 	@Before
 	public void setUpEircode() {
-		myEircode = new Eircode("F92 F1W8");
+		myEircode = new Eircode("f92 f1w8");
 	}
 
 	@Test
-	public void testGetEircode1() {
-		myEircode.setEircode("F92 F1W8");
-		assertEquals("F92 F1W8", myEircode.getEircode());
+	public void testGetEircode() {
+		assertEquals("F92F1W8", myEircode.getEircode());
 	}
 	
-	// Test Eircode class using JUnit
 	@Test
-	public void testGetEircode() {
-		assertEquals("F92F1W8", validEircode1.getEircode());
+	public void testSetEircode() {
+		myEircode.setEircode("F92F1W8");
+		assertEquals("F92F1W8", myEircode.getEircode());
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetEircodeLowercase() {
+		myEircode.setEircode("f92 f1w8");
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetEircodeTooShort() {
+		myEircode.setEircode("f92f1w");
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testSetEircodeTooLong() {
+		myEircode.setEircode("f92f1w88");
 	}
 
 	@Test(expected = IllegalArgumentException.class)
 	public void testEircodeTooLong() {
-		
 		new Eircode("F92 F1W81");
 	}
 
@@ -44,49 +60,48 @@ public class EircodeTests {
 		new Eircode("F92 F1W");
 	}
 	
+	// Mockito testing
 	@Before
 	public void setUp() {
 		provider = Mockito.mock(AddressProvider.class);
-		when(provider.getAddress(validEircode1)).thenReturn(validAddress1);
+		when(provider.getAddress(eircode1)).thenReturn(address1);
+		when(provider.getAddress(eircode2)).thenReturn(address2);
 	}
 
 	@Test
 	public void testCountryInProvidedAddress() {
-		Address testAddress = provider.getAddress(validEircode1);
-		// Hamcrest test
+		Address testAddress = provider.getAddress(eircode1);
 		assertThat(testAddress.getCountry(), is(equalTo("Ireland")));
+	}
+	
+	@Test
+	public void testCountyInProvidedAddress() {
+		Address testAddress = provider.getAddress(eircode1);
+		assertThat(testAddress.getCounty(), is(equalTo("Donegal")));
+	}
+	
+	@Test
+	public void testTownInProvidedAddress() {
+		Address testAddress = provider.getAddress(eircode1);
+		assertThat(testAddress.getTown(), is(equalTo("Burt")));
 	}
 
 	@Test
 	public void testCompleteAddress() {
-		Address testAddress = provider.getAddress(validEircode1);
-
-		// Do the test, hamcrest matching.
-		assertThat(testAddress, is(equalTo(validAddress1)));
+		Address testAddress = provider.getAddress(eircode1);
+		assertThat(testAddress, is(equalTo(address1)));
 	}
 
 	@Test
-	public void testCompleteAddress2() {
-		Address testAddress = provider.getAddress(validEircode1);
-
-		// Do the test, attribute by attribute using AssertJ matching.
-		assertThat(testAddress).isEqualToComparingFieldByField(validAddress1);
+	public void testAddressFields() {
+		Address testAddress = provider.getAddress(eircode1);
+		assertThat(testAddress).isEqualToComparingOnlyGivenFields(address1, "town");
 	}
 
 	@Test
-	public void testCompleteAddress3() {
-		Address testAddress = provider.getAddress(validEircode1);
-
-		// Do the test, attribute by attribute using AssertJ matching.
-		assertThat(testAddress).isEqualToComparingOnlyGivenFields(validAddress1, "country");
-	}
-
-	@Test
-	public void testCompleteAddress4() {
-		Address testAddress = provider.getAddress(validEircode1);
-
-		// Do the test, attribute by attribute using AssertJ matching.
-		assertThat(testAddress).hasFieldOrPropertyWithValue("county", "Donegal");
+	public void testPropertyWithinAddress() {
+		Address testAddress = provider.getAddress(eircode1);
+		assertThat(testAddress).hasFieldOrPropertyWithValue("country", "Ireland");
 	}
 
 }

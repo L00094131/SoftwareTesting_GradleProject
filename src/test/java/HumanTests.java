@@ -168,7 +168,7 @@ public class HumanTests {
 		assertEquals("R0bb", myHuman.getLName());
 	}
 
-	// Age tests
+	// Age JUnit tests
 	@Test
 	public void testGetAge() {
 		assertEquals(23, myHuman.getAge());
@@ -216,7 +216,7 @@ public class HumanTests {
 		assertEquals(131, myHuman.getAge());
 	}
 
-	// Weight tests
+	// Weight JUnit tests
 	@Test
 	public void testGetWeightInPounds() {
 		assertEquals(140, myHuman.getWeightInPounds());
@@ -380,9 +380,7 @@ public class HumanTests {
 	public void testGetGender() {
 		assertEquals(Gender.MALE, myHuman.getGender());
 	}
-	
-
-	
+		
 	@Test
 	public void testSetGenderFemale() {
 		myHuman.setGender(Gender.FEMALE);

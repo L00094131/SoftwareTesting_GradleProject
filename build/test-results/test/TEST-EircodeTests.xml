@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="EircodeTests" tests="16" skipped="0" failures="0" errors="0" timestamp="2017-04-27T16:09:29" hostname="Eugene" time="1.959">
+<testsuite name="EircodeTests" tests="26" skipped="0" failures="0" errors="0" timestamp="2017-04-27T19:05:20" hostname="Eugene" time="2.255">
   <properties/>
-  <testcase name="testEircodeTooShort" classname="EircodeTests" time="1.164"/>
+  <testcase name="testEircodeTooShort" classname="EircodeTests" time="1.473"/>
   <testcase name="testEircodeTooLong" classname="EircodeTests" time="0.003"/>
-  <testcase name="testGetEircode" classname="EircodeTests" time="0.003"/>
-  <testcase name="testCompleteAddress" classname="EircodeTests" time="0.033"/>
+  <testcase name="testCountyInProvidedAddress" classname="EircodeTests" time="0.016"/>
+  <testcase name="testGetEircode" classname="EircodeTests" time="0.002"/>
+  <testcase name="testSetEircodeLowercase" classname="EircodeTests" time="0.001"/>
+  <testcase name="testCompleteAddress" classname="EircodeTests" time="0.001"/>
+  <testcase name="testSetEircodeTooLong" classname="EircodeTests" time="0.001"/>
+  <testcase name="testSetEircode" classname="EircodeTests" time="0.001"/>
   <testcase name="testCountryInProvidedAddress" classname="EircodeTests" time="0.001"/>
-  <testcase name="testCompleteAddress2" classname="EircodeTests" time="0.18"/>
-  <testcase name="testCompleteAddress3" classname="EircodeTests" time="0.002"/>
-  <testcase name="testCompleteAddress4" classname="EircodeTests" time="0.002"/>
+  <testcase name="testSetEircodeTooShort" classname="EircodeTests" time="0.005"/>
+  <testcase name="testCompleteAddress2" classname="EircodeTests" time="0.199"/>
+  <testcase name="testCompleteAddress3" classname="EircodeTests" time="0.003"/>
+  <testcase name="testCompleteAddress4" classname="EircodeTests" time="0.004"/>
   <testcase name="testEircodeTooShort" classname="EircodeTests" time="0.001"/>
   <testcase name="testEircodeTooLong" classname="EircodeTests" time="0.0"/>
-  <testcase name="testGetEircode" classname="EircodeTests" time="0.0"/>
-  <testcase name="testCompleteAddress" classname="EircodeTests" time="0.0"/>
-  <testcase name="testCountryInProvidedAddress" classname="EircodeTests" time="0.0"/>
-  <testcase name="testCompleteAddress2" classname="EircodeTests" time="0.001"/>
-  <testcase name="testCompleteAddress3" classname="EircodeTests" time="0.003"/>
-  <testcase name="testCompleteAddress4" classname="EircodeTests" time="0.001"/>
+  <testcase name="testCountyInProvidedAddress" classname="EircodeTests" time="0.003"/>
+  <testcase name="testGetEircode" classname="EircodeTests" time="0.083"/>
+  <testcase name="testSetEircodeLowercase" classname="EircodeTests" time="0.002"/>
+  <testcase name="testCompleteAddress" classname="EircodeTests" time="0.001"/>
+  <testcase name="testSetEircodeTooLong" classname="EircodeTests" time="0.002"/>
+  <testcase name="testSetEircode" classname="EircodeTests" time="0.002"/>
+  <testcase name="testCountryInProvidedAddress" classname="EircodeTests" time="0.002"/>
+  <testcase name="testSetEircodeTooShort" classname="EircodeTests" time="0.002"/>
+  <testcase name="testCompleteAddress2" classname="EircodeTests" time="0.005"/>
+  <testcase name="testCompleteAddress3" classname="EircodeTests" time="0.006"/>
+  <testcase name="testCompleteAddress4" classname="EircodeTests" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

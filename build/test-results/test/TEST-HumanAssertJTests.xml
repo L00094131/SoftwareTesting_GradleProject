@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HumanAssertJTests" tests="20" skipped="0" failures="0" errors="0" timestamp="2017-04-27T16:09:30" hostname="Eugene" time="0.566">
+<testsuite name="HumanAssertJTests" tests="18" skipped="0" failures="0" errors="0" timestamp="2017-04-27T19:05:22" hostname="Eugene" time="0.579">
   <properties/>
-  <testcase name="testLNameNotEqualToFName" classname="HumanAssertJTests" time="0.013"/>
-  <testcase name="testContainsHyphenTwice" classname="HumanAssertJTests" time="0.002"/>
+  <testcase name="testLNameNotEqualToFName" classname="HumanAssertJTests" time="0.014"/>
+  <testcase name="testContainsHyphenTwice" classname="HumanAssertJTests" time="0.001"/>
   <testcase name="testIsEqualToFName" classname="HumanAssertJTests" time="0.004"/>
   <testcase name="testFNameNotEmpty" classname="HumanAssertJTests" time="0.002"/>
-  <testcase name="testWeightIsGreaterThanAge" classname="HumanAssertJTests" time="0.008"/>
-  <testcase name="testStartAndEndFName" classname="HumanAssertJTests" time="0.001"/>
-  <testcase name="testStartAndEndLName" classname="HumanAssertJTests" time="0.001"/>
+  <testcase name="testStartAndEndFName" classname="HumanAssertJTests" time="0.002"/>
+  <testcase name="testStartAndEndLName" classname="HumanAssertJTests" time="0.002"/>
+  <testcase name="testLNameContains" classname="HumanAssertJTests" time="0.001"/>
+  <testcase name="testContainsHyphenOnce" classname="HumanAssertJTests" time="0.002"/>
+  <testcase name="testGenderContains" classname="HumanAssertJTests" time="0.035"/>
+  <testcase name="testLNameNotEqualToFName" classname="HumanAssertJTests" time="0.002"/>
+  <testcase name="testContainsHyphenTwice" classname="HumanAssertJTests" time="0.002"/>
+  <testcase name="testIsEqualToFName" classname="HumanAssertJTests" time="0.007"/>
+  <testcase name="testFNameNotEmpty" classname="HumanAssertJTests" time="0.002"/>
+  <testcase name="testStartAndEndFName" classname="HumanAssertJTests" time="0.004"/>
+  <testcase name="testStartAndEndLName" classname="HumanAssertJTests" time="0.0"/>
   <testcase name="testLNameContains" classname="HumanAssertJTests" time="0.001"/>
   <testcase name="testContainsHyphenOnce" classname="HumanAssertJTests" time="0.001"/>
-  <testcase name="testGenderContains" classname="HumanAssertJTests" time="0.029"/>
-  <testcase name="testLNameNotEqualToFName" classname="HumanAssertJTests" time="0.0"/>
-  <testcase name="testContainsHyphenTwice" classname="HumanAssertJTests" time="0.0"/>
-  <testcase name="testIsEqualToFName" classname="HumanAssertJTests" time="0.0"/>
-  <testcase name="testFNameNotEmpty" classname="HumanAssertJTests" time="0.0"/>
-  <testcase name="testWeightIsGreaterThanAge" classname="HumanAssertJTests" time="0.0"/>
-  <testcase name="testStartAndEndFName" classname="HumanAssertJTests" time="0.002"/>
-  <testcase name="testStartAndEndLName" classname="HumanAssertJTests" time="0.001"/>
-  <testcase name="testLNameContains" classname="HumanAssertJTests" time="0.0"/>
-  <testcase name="testContainsHyphenOnce" classname="HumanAssertJTests" time="0.0"/>
-  <testcase name="testGenderContains" classname="HumanAssertJTests" time="0.0"/>
+  <testcase name="testGenderContains" classname="HumanAssertJTests" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -1,11 +1,11 @@
 
 public class Eircode {
-	private String eircode = null;
-	private String candidateEircode = null;
-	
-	public Eircode(String e){
+	private String eircode;
+	private String candidateEircode;
+
+	public Eircode(String e) {
 		super();
-		
+
 		candidateEircode = generateCanonicalEircode(e);
 
 		if (candidateEircode.length() < 7)
@@ -15,20 +15,28 @@ public class Eircode {
 			throw new IllegalArgumentException("Input eircode too long: " + candidateEircode.length());
 		this.eircode = candidateEircode;
 	}
-	
+
 	private String generateCanonicalEircode(String nonCanonicalEircode) {
 		String CanonicalEircode = nonCanonicalEircode.replaceAll("\\s+", "");
 		CanonicalEircode = CanonicalEircode.toUpperCase();
 		return CanonicalEircode;
 	}
-	
-	
+
 	public String getEircode() {
 		return eircode;
 	}
 
 	public void setEircode(String eircode) {
-		this.eircode = eircode;
+		if (eircode.length() < 7) {
+			throw new IllegalArgumentException("Eircode too short");
+		}
+		if (eircode.length() > 7) {
+			throw new IllegalArgumentException("Eircode too long");
+		} else {
+			eircode.toUpperCase();
+			eircode.replaceAll("\\s+", "");
+			this.eircode = eircode;
+		}
 	}
-	
+
 }

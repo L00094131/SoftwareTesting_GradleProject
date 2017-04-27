@@ -57,12 +57,7 @@ public class HumanAssertJTests {
 		assertThat(myHuman.getLName()).isNotEqualTo(myHuman.getFName());
 	}
 
-	// Other tests
-	@Test
-	public void testWeightIsGreaterThanAge(){
-		assertThat(myHuman.getWeightInPounds()).isGreaterThan(myHuman.getAgeFromDateOfBirth());
-	}
-	
+	// Testing gender
 	@Test
 	public void testGenderContains(){
 		assertThat(myHuman).extracting("gender").contains(Gender.MALE);

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HumanTests" tests="124" skipped="0" failures="4" errors="0" timestamp="2017-04-27T16:09:30" hostname="Eugene" time="0.702">
+<testsuite name="HumanTests" tests="124" skipped="0" failures="4" errors="0" timestamp="2017-04-27T19:05:22" hostname="Eugene" time="0.657">
   <properties/>
-  <testcase name="testSetAboveMaxAgeException" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetAgeFromDateMiddleAge" classname="HumanTests" time="0.033"/>
-  <testcase name="testFailedDoubleHypenatedFirstName" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetMinWeightInPounds" classname="HumanTests" time="0.003"/>
+  <testcase name="testSetAboveMaxAgeException" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetAgeFromDateMiddleAge" classname="HumanTests" time="0.036"/>
+  <testcase name="testFailedDoubleHypenatedFirstName" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetMinWeightInPounds" classname="HumanTests" time="0.0"/>
   <testcase name="testDoubleFadaIrishFirstName" classname="HumanTests" time="0.0"/>
-  <testcase name="testDoubleHypenatedLastName" classname="HumanTests" time="0.004"/>
+  <testcase name="testDoubleHypenatedLastName" classname="HumanTests" time="0.008"/>
   <testcase name="testSetAboveMinWeightInPounds" classname="HumanTests" time="0.0"/>
   <testcase name="testSetFirstName" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetAboveMaxHeightInCentimetersException" classname="HumanTests" time="0.037"/>
-  <testcase name="testLastNameWithSpaceCommaFullStop" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetAboveMinAge" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetAgeFromDateBelowMaxAge" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetAgeFromDateBelowMinAge" classname="HumanTests" time="0.004"/>
-  <testcase name="testFadaWithApostropheIrishFirstName" classname="HumanTests" time="0.003"/>
-  <testcase name="testSetMiddleAge" classname="HumanTests" time="0.002"/>
-  <testcase name="testSetAboveMinHeightInCentimeters" classname="HumanTests" time="0.003"/>
-  <testcase name="testSetMiddleHeightInCentimeters" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetAgeFromDateMaxAge" classname="HumanTests" time="0.002"/>
-  <testcase name="testSetAgeFromDateMinAge" classname="HumanTests" time="0.001"/>
-  <testcase name="testDoubleHypenatedFirstName" classname="HumanTests" time="0.002"/>
-  <testcase name="testValueOfGender" classname="HumanTests" time="0.005"/>
-  <testcase name="testGetWeightInPounds" classname="HumanTests" time="0.001"/>
-  <testcase name="testFadaIrishLastName" classname="HumanTests" time="0.048">
+  <testcase name="testSetAboveMaxHeightInCentimetersException" classname="HumanTests" time="0.027"/>
+  <testcase name="testLastNameWithSpaceCommaFullStop" classname="HumanTests" time="0.003"/>
+  <testcase name="testSetAboveMinAge" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetAgeFromDateBelowMaxAge" classname="HumanTests" time="0.003"/>
+  <testcase name="testSetAgeFromDateBelowMinAge" classname="HumanTests" time="0.002"/>
+  <testcase name="testFadaWithApostropheIrishFirstName" classname="HumanTests" time="0.002"/>
+  <testcase name="testSetMiddleAge" classname="HumanTests" time="0.006"/>
+  <testcase name="testSetAboveMinHeightInCentimeters" classname="HumanTests" time="0.007"/>
+  <testcase name="testSetMiddleHeightInCentimeters" classname="HumanTests" time="0.005"/>
+  <testcase name="testSetAgeFromDateMaxAge" classname="HumanTests" time="0.003"/>
+  <testcase name="testSetAgeFromDateMinAge" classname="HumanTests" time="0.004"/>
+  <testcase name="testDoubleHypenatedFirstName" classname="HumanTests" time="0.001"/>
+  <testcase name="testValueOfGender" classname="HumanTests" time="0.001"/>
+  <testcase name="testGetWeightInPounds" classname="HumanTests" time="0.002"/>
+  <testcase name="testFadaIrishLastName" classname="HumanTests" time="0.008">
     <failure message="java.lang.IllegalArgumentException: Last name can only be alphabetic with apostrophe or hyphen." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Last name can only be alphabetic with apostrophe or hyphen.
 	at Human.setLName(Human.java:71)
 	at HumanTests.testFadaIrishLastName(HumanTests.java:155)
@@ -85,22 +85,22 @@
 	at java.lang.Thread.run(Thread.java:745)
 </failure>
   </testcase>
-  <testcase name="testSetBelowMinAgeException" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetAboveMaxWeightInPoundsException" classname="HumanTests" time="0.005"/>
+  <testcase name="testSetBelowMinAgeException" classname="HumanTests" time="0.003"/>
+  <testcase name="testSetAboveMaxWeightInPoundsException" classname="HumanTests" time="0.001"/>
   <testcase name="testSetLastName" classname="HumanTests" time="0.003"/>
-  <testcase name="testGetLastName" classname="HumanTests" time="0.001"/>
+  <testcase name="testGetLastName" classname="HumanTests" time="0.005"/>
   <testcase name="testApostropheLastName" classname="HumanTests" time="0.004"/>
   <testcase name="testSetMaxHeightInCentimeters" classname="HumanTests" time="0.002"/>
-  <testcase name="testSpaceLastName" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetMaxWeightInPounds" classname="HumanTests" time="0.002"/>
-  <testcase name="testGetHeightInCentimeters" classname="HumanTests" time="0.002"/>
+  <testcase name="testSpaceLastName" classname="HumanTests" time="0.002"/>
+  <testcase name="testSetMaxWeightInPounds" classname="HumanTests" time="0.001"/>
+  <testcase name="testGetHeightInCentimeters" classname="HumanTests" time="0.001"/>
   <testcase name="testSetAgeFromDateAboveMaxAge" classname="HumanTests" time="0.001"/>
   <testcase name="testSetAgeFromDateAboveMinAge" classname="HumanTests" time="0.002"/>
-  <testcase name="testSingleFadaIrishLastNameWithSpace" classname="HumanTests" time="0.002"/>
+  <testcase name="testSingleFadaIrishLastNameWithSpace" classname="HumanTests" time="0.001"/>
   <testcase name="testHypenatedLastName" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetBelowMinHeightInCentimetersException" classname="HumanTests" time="0.005"/>
-  <testcase name="testGetAgeFromDateOfBirth" classname="HumanTests" time="0.002"/>
-  <testcase name="testFadaWithApostropheIrishLastName" classname="HumanTests" time="0.01">
+  <testcase name="testSetBelowMinHeightInCentimetersException" classname="HumanTests" time="0.001"/>
+  <testcase name="testGetAgeFromDateOfBirth" classname="HumanTests" time="0.0"/>
+  <testcase name="testFadaWithApostropheIrishLastName" classname="HumanTests" time="0.001">
     <failure message="java.lang.IllegalArgumentException: Last name can only be alphabetic with apostrophe or hyphen." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Last name can only be alphabetic with apostrophe or hyphen.
 	at Human.setLName(Human.java:71)
 	at HumanTests.testFadaWithApostropheIrishLastName(HumanTests.java:161)
@@ -163,51 +163,51 @@
 </failure>
   </testcase>
   <testcase name="testFirstNameWithSpace" classname="HumanTests" time="0.01"/>
-  <testcase name="testSingleFadaIrishFirstName" classname="HumanTests" time="0.011"/>
-  <testcase name="testSetBelowMaxAge" classname="HumanTests" time="0.019"/>
-  <testcase name="testSetBelowMaxWeightInPounds" classname="HumanTests" time="0.008"/>
-  <testcase name="testSetMaxAge" classname="HumanTests" time="0.005"/>
-  <testcase name="testSetMinAge" classname="HumanTests" time="0.006"/>
-  <testcase name="testGetGender" classname="HumanTests" time="0.006"/>
-  <testcase name="testGetFirstName" classname="HumanTests" time="0.005"/>
-  <testcase name="testSetBelowMinWeightInPoundsException" classname="HumanTests" time="0.006"/>
-  <testcase name="testHypenatedFirstName" classname="HumanTests" time="0.012"/>
-  <testcase name="testSetMiddleWeightInPounds" classname="HumanTests" time="0.006"/>
-  <testcase name="testSetGenderFemale" classname="HumanTests" time="0.003"/>
-  <testcase name="testGetAge" classname="HumanTests" time="0.002"/>
-  <testcase name="testSetGenderMale" classname="HumanTests" time="0.002"/>
+  <testcase name="testSingleFadaIrishFirstName" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetBelowMaxAge" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetBelowMaxWeightInPounds" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetMaxAge" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetMinAge" classname="HumanTests" time="0.001"/>
+  <testcase name="testGetGender" classname="HumanTests" time="0.002"/>
+  <testcase name="testGetFirstName" classname="HumanTests" time="0.002"/>
+  <testcase name="testSetBelowMinWeightInPoundsException" classname="HumanTests" time="0.001"/>
+  <testcase name="testHypenatedFirstName" classname="HumanTests" time="0.003"/>
+  <testcase name="testSetMiddleWeightInPounds" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetGenderFemale" classname="HumanTests" time="0.0"/>
+  <testcase name="testGetAge" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetGenderMale" classname="HumanTests" time="0.0"/>
   <testcase name="testSetFirstNameWithNumber" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetMinHeightInCentimeters" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetGenderOther" classname="HumanTests" time="0.002"/>
-  <testcase name="testSetFirstNameWithSymbol" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetLastNameWithNumber" classname="HumanTests" time="0.002"/>
+  <testcase name="testSetMinHeightInCentimeters" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetGenderOther" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetFirstNameWithSymbol" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetLastNameWithNumber" classname="HumanTests" time="0.0"/>
   <testcase name="testSetLastNameFullStopAtStart" classname="HumanTests" time="0.0"/>
   <testcase name="testSetLastNameWithSymbol" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetBelowMaxHeightInCentimeters" classname="HumanTests" time="0.0"/>
-  <testcase name="testApostrophesFirstName" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetAboveMaxAgeException" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetAgeFromDateMiddleAge" classname="HumanTests" time="0.0"/>
-  <testcase name="testFailedDoubleHypenatedFirstName" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetMinWeightInPounds" classname="HumanTests" time="0.0"/>
-  <testcase name="testDoubleFadaIrishFirstName" classname="HumanTests" time="0.002"/>
-  <testcase name="testDoubleHypenatedLastName" classname="HumanTests" time="0.007"/>
-  <testcase name="testSetAboveMinWeightInPounds" classname="HumanTests" time="0.003"/>
-  <testcase name="testSetFirstName" classname="HumanTests" time="0.002"/>
-  <testcase name="testSetAboveMaxHeightInCentimetersException" classname="HumanTests" time="0.002"/>
-  <testcase name="testLastNameWithSpaceCommaFullStop" classname="HumanTests" time="0.003"/>
-  <testcase name="testSetAboveMinAge" classname="HumanTests" time="0.022"/>
-  <testcase name="testSetAgeFromDateBelowMaxAge" classname="HumanTests" time="0.002"/>
-  <testcase name="testSetAgeFromDateBelowMinAge" classname="HumanTests" time="0.003"/>
-  <testcase name="testFadaWithApostropheIrishFirstName" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetMiddleAge" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetAboveMinHeightInCentimeters" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetBelowMaxHeightInCentimeters" classname="HumanTests" time="0.001"/>
+  <testcase name="testApostrophesFirstName" classname="HumanTests" time="0.008"/>
+  <testcase name="testSetAboveMaxAgeException" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetAgeFromDateMiddleAge" classname="HumanTests" time="0.001"/>
+  <testcase name="testFailedDoubleHypenatedFirstName" classname="HumanTests" time="0.005"/>
+  <testcase name="testSetMinWeightInPounds" classname="HumanTests" time="0.001"/>
+  <testcase name="testDoubleFadaIrishFirstName" classname="HumanTests" time="0.001"/>
+  <testcase name="testDoubleHypenatedLastName" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetAboveMinWeightInPounds" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetFirstName" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetAboveMaxHeightInCentimetersException" classname="HumanTests" time="0.001"/>
+  <testcase name="testLastNameWithSpaceCommaFullStop" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetAboveMinAge" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetAgeFromDateBelowMaxAge" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetAgeFromDateBelowMinAge" classname="HumanTests" time="0.001"/>
+  <testcase name="testFadaWithApostropheIrishFirstName" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetMiddleAge" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetAboveMinHeightInCentimeters" classname="HumanTests" time="0.0"/>
   <testcase name="testSetMiddleHeightInCentimeters" classname="HumanTests" time="0.0"/>
   <testcase name="testSetAgeFromDateMaxAge" classname="HumanTests" time="0.0"/>
   <testcase name="testSetAgeFromDateMinAge" classname="HumanTests" time="0.001"/>
-  <testcase name="testDoubleHypenatedFirstName" classname="HumanTests" time="0.0"/>
+  <testcase name="testDoubleHypenatedFirstName" classname="HumanTests" time="0.001"/>
   <testcase name="testValueOfGender" classname="HumanTests" time="0.0"/>
   <testcase name="testGetWeightInPounds" classname="HumanTests" time="0.0"/>
-  <testcase name="testFadaIrishLastName" classname="HumanTests" time="0.001">
+  <testcase name="testFadaIrishLastName" classname="HumanTests" time="0.002">
     <failure message="java.lang.IllegalArgumentException: Last name can only be alphabetic with apostrophe or hyphen." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Last name can only be alphabetic with apostrophe or hyphen.
 	at Human.setLName(Human.java:71)
 	at HumanTests.testFadaIrishLastName(HumanTests.java:155)
@@ -261,21 +261,21 @@
 	at java.lang.Thread.run(Thread.java:745)
 </failure>
   </testcase>
-  <testcase name="testSetBelowMinAgeException" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetAboveMaxWeightInPoundsException" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetLastName" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetBelowMinAgeException" classname="HumanTests" time="0.003"/>
+  <testcase name="testSetAboveMaxWeightInPoundsException" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetLastName" classname="HumanTests" time="0.001"/>
   <testcase name="testGetLastName" classname="HumanTests" time="0.0"/>
-  <testcase name="testApostropheLastName" classname="HumanTests" time="0.003"/>
+  <testcase name="testApostropheLastName" classname="HumanTests" time="0.0"/>
   <testcase name="testSetMaxHeightInCentimeters" classname="HumanTests" time="0.001"/>
-  <testcase name="testSpaceLastName" classname="HumanTests" time="0.001"/>
+  <testcase name="testSpaceLastName" classname="HumanTests" time="0.0"/>
   <testcase name="testSetMaxWeightInPounds" classname="HumanTests" time="0.0"/>
-  <testcase name="testGetHeightInCentimeters" classname="HumanTests" time="0.0"/>
+  <testcase name="testGetHeightInCentimeters" classname="HumanTests" time="0.001"/>
   <testcase name="testSetAgeFromDateAboveMaxAge" classname="HumanTests" time="0.0"/>
   <testcase name="testSetAgeFromDateAboveMinAge" classname="HumanTests" time="0.001"/>
-  <testcase name="testSingleFadaIrishLastNameWithSpace" classname="HumanTests" time="0.0"/>
+  <testcase name="testSingleFadaIrishLastNameWithSpace" classname="HumanTests" time="0.001"/>
   <testcase name="testHypenatedLastName" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetBelowMinHeightInCentimetersException" classname="HumanTests" time="0.0"/>
-  <testcase name="testGetAgeFromDateOfBirth" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetBelowMinHeightInCentimetersException" classname="HumanTests" time="0.001"/>
+  <testcase name="testGetAgeFromDateOfBirth" classname="HumanTests" time="0.0"/>
   <testcase name="testFadaWithApostropheIrishLastName" classname="HumanTests" time="0.001">
     <failure message="java.lang.IllegalArgumentException: Last name can only be alphabetic with apostrophe or hyphen." type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: Last name can only be alphabetic with apostrophe or hyphen.
 	at Human.setLName(Human.java:71)
@@ -331,28 +331,28 @@
 </failure>
   </testcase>
   <testcase name="testFirstNameWithSpace" classname="HumanTests" time="0.0"/>
-  <testcase name="testSingleFadaIrishFirstName" classname="HumanTests" time="0.006"/>
-  <testcase name="testSetBelowMaxAge" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetBelowMaxWeightInPounds" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetMaxAge" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetMinAge" classname="HumanTests" time="0.001"/>
+  <testcase name="testSingleFadaIrishFirstName" classname="HumanTests" time="0.003"/>
+  <testcase name="testSetBelowMaxAge" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetBelowMaxWeightInPounds" classname="HumanTests" time="0.003"/>
+  <testcase name="testSetMaxAge" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetMinAge" classname="HumanTests" time="0.0"/>
   <testcase name="testGetGender" classname="HumanTests" time="0.0"/>
-  <testcase name="testGetFirstName" classname="HumanTests" time="0.0"/>
+  <testcase name="testGetFirstName" classname="HumanTests" time="0.001"/>
   <testcase name="testSetBelowMinWeightInPoundsException" classname="HumanTests" time="0.0"/>
-  <testcase name="testHypenatedFirstName" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetMiddleWeightInPounds" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetGenderFemale" classname="HumanTests" time="0.0"/>
-  <testcase name="testGetAge" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetGenderMale" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetFirstNameWithNumber" classname="HumanTests" time="0.0"/>
-  <testcase name="testSetMinHeightInCentimeters" classname="HumanTests" time="0.0"/>
+  <testcase name="testHypenatedFirstName" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetMiddleWeightInPounds" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetGenderFemale" classname="HumanTests" time="0.001"/>
+  <testcase name="testGetAge" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetGenderMale" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetFirstNameWithNumber" classname="HumanTests" time="0.001"/>
+  <testcase name="testSetMinHeightInCentimeters" classname="HumanTests" time="0.004"/>
   <testcase name="testSetGenderOther" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetFirstNameWithSymbol" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetFirstNameWithSymbol" classname="HumanTests" time="0.002"/>
   <testcase name="testSetLastNameWithNumber" classname="HumanTests" time="0.001"/>
-  <testcase name="testSetLastNameFullStopAtStart" classname="HumanTests" time="0.0"/>
+  <testcase name="testSetLastNameFullStopAtStart" classname="HumanTests" time="0.001"/>
   <testcase name="testSetLastNameWithSymbol" classname="HumanTests" time="0.0"/>
   <testcase name="testSetBelowMaxHeightInCentimeters" classname="HumanTests" time="0.0"/>
-  <testcase name="testApostrophesFirstName" classname="HumanTests" time="0.0"/>
+  <testcase name="testApostrophesFirstName" classname="HumanTests" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
